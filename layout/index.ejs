@@ -1,0 +1,43 @@
+---
+layout: layout
+---
+<ul class="list-unstyled">
+    <% page.posts.each(function(post) { %>
+        <li class="post-item card">
+            <a class="post-anchor" href="<%- config.root %><%- post.path %>">
+                <h2 class="post-title hover-underline-animation">
+                    <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                        return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                    }) _%>
+                </h2>
+            </a>
+
+            <p class="post-meta">
+                <%_ if (post.tags.length){ %>
+                    <%= __('post.tags') _%>：
+                    <% post.tags.forEach(function(tag){ %>
+                        <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                    <% }) %>
+                <% } %>
+                <%= __('post.postTime') %>：<%= post.date.format(config.date_format) %>
+            </p>
+        </li>
+    <% }); _%>
+</ul>
+
+<ul class="list-unstyled pager">
+    <li class="left">
+        <% if (page.prev){ %>
+          <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+        <% } else { %>
+          <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+        <% } %>
+    </li>
+    <li class="right">
+        <% if (page.next){ %>
+          <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+        <% } else { %>
+          <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+        <% } %>
+    </li>
+</ul>

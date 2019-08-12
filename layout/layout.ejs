@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="<%- config.language %>">
+  <%- partial('_partial/head') %>
+  <body>
+    <% if (!is_post()) { %>
+      <%- partial('_partial/header', null, {cache: true}) %>
+    <% } %>
+
+    <main class="wrapper"><%- body %></main>
+
+    <%- partial('_partial/footer', null, {cache: true}) %>
+  </body>
+</html>

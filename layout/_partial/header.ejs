@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="wrapper">
+    <h1 class=" title">
+      <span class="title-brand"><%- __('title') %></span>
+      <input class="offscreen" type="checkbox" id="toggle" name="toggle" aria-label="toggle" /><label for="toggle" class="switch"></label>
+    </h1>
+  </div>
+</header>
+
+<nav class="navbar wrapper">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= url_for(config.root) %>"><%- __('nav.home') %></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="<%= url_for(config.project_dir) %>"><%- __('nav.projects') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= url_for(config.tag_dir) %>"><%- __('nav.tags') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= url_for(config.archive_dir) %>"><%- __('nav.archives') %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= config.root %><%- 'about/' %>"><%- __('nav.about') %></a>
+      </li>
+    </ul>
+</nav>

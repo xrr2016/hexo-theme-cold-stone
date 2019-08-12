@@ -1,0 +1,37 @@
+---
+layout: layout
+---
+
+<%
+const years = {};
+site.posts.sort('date').reverse().forEach(function(post){
+    let year = post.date.year()
+    if(years[year]===undefined){
+        years[year] = [];
+    }
+    years[year].push(post);
+});
+%>
+
+<!-- 归档列表 -->
+<ul class="archives list-unstyled">
+    <% Object.keys(years).reverse().forEach(function(year){  %>
+        <li class="card">
+            <span id="<%= year %>"><span class="tag-text"><%= year %></span></span>
+            <ul>
+                <% years[year].map(function(post){  %>
+                <li>
+                    <span><%= post.date.format('MM-DD') %></span>
+                    <a href="<%- config.root %><%- post.path %>">
+                        <span class="hover-underline-animation">
+                            <%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                                return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                            }) %>
+                        </span>
+                    </a>
+                </li>
+            <% }) %>
+            </ul>
+        </li>
+    <% }) %>
+</ul>

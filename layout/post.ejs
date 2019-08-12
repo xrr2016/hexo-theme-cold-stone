@@ -1,0 +1,40 @@
+<article class="article">
+  <section>
+    <h1 class="article-title">
+      <%- page.title.replace(/[<>&"]/g, function(c){
+        return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+      }) _%>
+    </h1>
+    <p class="article-meta">
+      <span class="meta-info">
+        <%= __('post.updateTime') %>：<%- page.updated.format(config.date_format) +" "+ page.updated.format(config.time_format)%>
+        <% if (page.tags.length){ %>
+          <%= __('post.tags') %>：
+          <% page.tags.forEach(function(tag){ %>
+            <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+          <% }) %>
+        <% } %>
+      </span>
+      <a  class="meta-link" href="/">返回</a>
+    </p>
+  </section>
+  <section><%- page.content %></section>
+  <section class="article-toc">
+    <%- toc(page.content, {list_number	: false }) %>
+  </section>
+</article>
+
+<section class="article">
+
+  <div class="loader" id="loader">
+    <svg viewBox="0 0 50 50">
+      <circle class="ring" cx="25" cy="25" r="20"></circle>
+      <circle class="ball" cx="25" cy="5" r="3.5"></circle>
+    </svg>
+  </div>
+
+  <div class="comment" id="utteranc"></div>
+  <noscript>为正常使用评论功能请激活 JavaScript</noscript>
+</section>
+
+
