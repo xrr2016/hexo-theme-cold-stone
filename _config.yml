@@ -1,9 +1,17 @@
+# 用户设置
+author:
+avatar:
+subtitle:
+
 # utteranc 评论系统
 comment:
-   type: utteranc
    repo:
 
 # 一些社交平台地址，支持以下几种：
 sns:
   github:
   juejin:
+
+# 访问数据
+track:
+  ga:

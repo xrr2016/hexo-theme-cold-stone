@@ -1,14 +1,14 @@
 <div class="avatar>">
-  <img class="avatar-img" src="<%= config['root'] %><%= config['sidebar-avatar'] %>" />
+  <img class="avatar-img" src="<%= config['root'] %><%= config['avatar'] %>" />
 </div>
 
 <div class="username"><i><%= config.author %></i></div>
 
 <p class="subtitle"><%= config.subtitle %></p>
 
-<% if (config.github_username) { %>
-	<a class="about-link" target="_blank" rel="noopener" href="https://github.com/<%= config.github_username %>">Github</a>
+<% if (config.sns.github) { %>
+	<a class="about-link" target="_blank" rel="noopener" href="https://github.com/<%= config.sns.github %>">Github</a>
 <% } %>
-<% if (config.juejin_userid) { %>
-	<a class="about-link" target="_blank" rel="noopener" href="https://juejin.im/user/<%= config.juejin_userid %>">掘金</a>
+<% if (config.sns.juejin) { %>
+	<a class="about-link" target="_blank" rel="noopener" href="https://juejin.im/user/<%= config.sns.juejin %>">掘金</a>
 <% } %>

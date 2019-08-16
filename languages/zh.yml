@@ -3,17 +3,14 @@ title: 冷石的博客
 nav:
   home: 主页
   tags: 标签
+  about: 关于
   projects: 项目
   archives: 存档
-  about: 关于
-  search: 搜索
-  music: 听歌
 
 post:
   postTime: 发布于
   updateTime: 最后更新
   tags: 标签
-  visit: 访问
 
 search:
   search: 搜索
