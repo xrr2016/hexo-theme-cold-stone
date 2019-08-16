@@ -14,6 +14,18 @@
 
 [预览地址](https://coldstone.funv)
 
+## 快速开始
+
+```sh
+npm install -g hexo-cli
+
+hexo init <folder>
+
+cd <folder>
+
+npm install
+```
+
 ## 特性
 
 - 夜间模式
@@ -24,7 +36,7 @@
 ## 安装
 
 ```sh
-git clone https://github.com/xrr206/hexo-theme-cold-stone.git themes/cold-stone
+git clone https://github.com/xrr2016/hexo-theme-cold-stone.git themes/cold-stone
 ```
 
 ## 使用
@@ -46,9 +58,8 @@ theme: cold-stone
 seo_title: 冷石的博客
 
 # 用户设置
-author: Cold Stone
 avatar: avatar.png
-subtitle: 真正的意志是不会被击败的
+
 
 # Utteranc 评论系统
 comment:
