@@ -8,7 +8,7 @@
     <p class="article-meta">
       <span class="meta-info">
         <%= __('post.updateTime') %>：<%- page.updated.format(config.date_format) +" "+ page.updated.format(config.time_format)%>
-        <% if (page.tags.length){ %>
+        <% if (page.tags){ %>
           <%= __('post.tags') %>：
           <% page.tags.forEach(function(tag){ %>
             <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
@@ -19,7 +19,7 @@
     </p>
   </section>
   <section><%- page.content %></section>
-  <section class="article-toc">
+  <section class="card article-toc">
     <%- toc(page.content, {list_number	: false }) %>
   </section>
 </article>
