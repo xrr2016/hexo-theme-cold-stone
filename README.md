@@ -1,6 +1,6 @@
 # Cold Stone
 
-一个简洁，文字为主的 Hexo 博客主题
+一个简洁，文字为主的 [Hexo](https://hexo.io) 博客主题
 
 [中文文档](README-zh.md)
 
@@ -29,7 +29,7 @@ git clone https://github.com/xrr206/hexo-theme-cold-stone.git themes/cold-stone
 
 ## 使用
 
-修改 Hexo 博客根目录下 `_config.yml` 文件 theme 设置为
+修改你的 Hexo 博客根目录下 `_config.yml` 文件 theme 设置为
 
 ```yml
 theme: cold-stone
@@ -37,7 +37,19 @@ theme: cold-stone
 
 ## 配置
 
+修改你的 Hexo 博客根目录下 `_config.yml` 文件
+
 ```yml
+# 示例
+
+# 博客设置
+seo_title: 冷石的博客
+
+# 用户设置
+author: Cold Stone
+avatar: avatar.png
+subtitle: 真正的意志是不会被击败的
+
 # Utteranc 评论系统
 comment:
   repo: xrr2016/blog
@@ -48,24 +60,25 @@ sns:
   juejin: 576666b7207703006b1e0f09
 
 # 博客访问数据
-track: ga:
+track:
+  ga: UA-119658292-2
 ```
 
 ## 谁在使用
 
-[冷石的博客](https://coldstone.fun)
+[冷石的博客](https://coldstone.fun) 💯
 
 ![audits](images/audits.gif)
 
 # TODOS
 
-- [] 搜索功能
+- [ ] 搜索功能
 
-- [] 分类页面
+- [ ] 分类页面
 
-- [] 显示页面访问量
+- [ ] 显示页面访问量
 
-- [] 友站链接页面
+- [ ] 友站链接页面
 
 ## 协议
 

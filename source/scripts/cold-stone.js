@@ -1,3 +1,4 @@
+// service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', event => {
   })
 })
 
-// theme
+// toggle theme
 const body = document.body
 const head = document.getElementsByTagName('head')[0]
 const toggle = document.getElementById('toggle')
@@ -56,7 +57,7 @@ if (utteranc) {
   uscript.async = true
   uscript.crossOrigin = 'anonymous'
   uscript.src = 'https://utteranc.es/client.js'
-  uscript.setAttribute('repo', 'xrr2016/blog')
+  uscript.setAttribute('repo', window.COLD_STONE.repo)
   uscript.setAttribute('issue-term', 'pathname')
 
   if (theme === 'dark') {
@@ -66,14 +67,14 @@ if (utteranc) {
   }
 
   utteranc.appendChild(uscript)
-
+  // 假装在加载
   const timeout = setTimeout(function() {
     loader.remove()
     clearTimeout(timeout)
   }, 2000)
 }
 
-// nav
+// nav item
 const path = location.pathname
 const navs = ['/', '/projects/', '/tags/', '/archives/', '/about/']
 const navLinkList = document.querySelectorAll('.nav-link')
@@ -84,7 +85,7 @@ navs.forEach(function(nav, index) {
   }
 })
 
-// toc
+// article toc
 const tocLinkList = document.querySelectorAll('.toc-link')
 
 tocLinkList.forEach(function(link) {
