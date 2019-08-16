@@ -1,29 +1,30 @@
 # Cold Stone
 
-一个简洁，文字为主的 [Hexo](https://hexo.io) 博客主题
+A simple, clean, text-based [Hexo](https://hexo.io) blog theme.
 
 [中文文档](README-zh.md)
 
-## 前言
+## Foreword
 
-个人认为博客的主要内容应该是文字，但是很多 Hexo 主题带有大量的图片，容易分散读者的注意力，而一些以文字为主的主题功能都有些简陋，因此 Cold Stone 主题诞生了！
+In my opinion the main content of the blog should be text, but many Hexo themes with a lot of pictures, easy to distract the reader's attention, and some of the text-based theme features are somewhat simple, so the Cold Stone theme was born!
 
-## 预览
+## Preview
 
 ![responsive](images/response.png)
 
-[预览地址](https://coldstone.fun)
+[preview address](https://coldstone.fun)
 
-## 特性
+## Feature
 
-- 夜间模式
-- PWA（渐进式应用）
-- Utteranc 评论系统
-- 移动端友好
+- night mode
+- PWA (progressive web application)
+- Utteranc comment System
+- Mobile friendly
+- English/Chinese
 
-## 快速开始
+## Quick start
 
-首先需要安装 [Hexo](https://hexo.io) 用来创建项目，已经初始过的可以跳过此步
+First you need to install [Hexo](https://hexo.io) to create the project. You can skip this step if you have already started.
 
 ```sh
 npm install -g hexo-cli
@@ -35,23 +36,23 @@ cd <folder>
 npm install
 ```
 
-### 安装主题
+### Install theme
 
 ```sh
 git clone https://github.com/xrr2016/hexo-theme-cold-stone.git themes/cold-stone
 ```
 
-### 使用
+### Usage
 
-1. 修改你的 Hexo 博客根目录下 `_config.yml` 文件 theme 设置为
+1. Modify the `_config.yml` file in your Hexo blog root directory to set theme to
 
 ```yml
 theme: cold-stone
 ```
 
-2. 将 `themes/cold-stone` 目录下的 `icons` 移动到 `source` 目录下
+2. Move `icons` in the `themes/cold-stone` directory to the `source` directory
 
-3. 新建需要的页面
+3. Craete pages you need
 
 ```sh
 hexo new page proejcts
@@ -59,7 +60,7 @@ hexo new page proejcts
 hexo new page tags
 ```
 
-添加 `source/projects/index.md` 的 layout 配置为
+Add the layout of `source/projects/index.md` to
 
 ```md
 ---
@@ -69,7 +70,7 @@ layout: projects
 ---
 ```
 
-添加 `source/tags/index.md` 的 layout 配置为
+Add the layout of `source/tags/index.md` to
 
 ```md
 ---
@@ -79,9 +80,9 @@ layout: tags
 ---
 ```
 
-4. 在 `source` 目录下添加 `avatar.png` 图片
+4. Add a `avatar.png` image to the `source` directory
 
-5. 修改你的 Hexo 博客的配置，示例如下
+5. Modify the configuration of your Hexo blog, examples are as follows
 
 ```yml
 # 博客设置
@@ -113,31 +114,30 @@ hexo server
 
 ### 发布
 
-安装 hexo-deployer-git
+- install hexo-deployer-git
 
 ```sh
  npm install hexo-deployer-git --save
 ```
 
-修改配置
+- set config
 
 ```yml
 deploy:
   type: git
-  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [branch] #published
-  message: [message]
+  repo: https://github.com/your-username/your-repo
+  branch: gh-pages
 ```
 
-发布
+- publish
 
 ```sh
 hexo clean && hexo deploy
 ```
 
-更多方式参考：https://hexo.io/docs/deployment
+More ways to refer：https://hexo.io/docs/deployment
 
-## 谁在使用
+## Using
 
 [冷石的博客](https://coldstone.fun) 💯
 
@@ -145,18 +145,18 @@ hexo clean && hexo deploy
 
 # TODOS
 
-- [ ] 搜索功能
+- [ ] Search
 
-- [ ] 分类页面
+- [ ] Category
 
-- [ ] 显示页面访问量
+- [ ] Show page views
 
-- [ ] 友站链接页面
+- [ ] Friends link page
 
-## 协议
+## License
 
 [MIT](LICENSE)
 
-## 附言
+## PS
 
-如果觉得这个主题不错，请个这个仓库一个 star 吧
+If you think this theme is no bad, please star this repo.
