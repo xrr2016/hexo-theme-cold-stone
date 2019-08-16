@@ -16,7 +16,7 @@
 
 - 夜间模式
 - PWA（渐进式应用）
-- Utteranc 评论系统
+- [Utteranc](https://utteranc.es/) 评论系统
 - 移动端友好
 - English/中文
 
@@ -53,17 +53,17 @@ theme: cold-stone
 3. 新建需要的页面
 
 ```sh
-hexo new page proejcts
+hexo new page projects
 
 hexo new page tags
+
+hexo new page about
 ```
 
 添加 `source/projects/index.md` 的 layout 配置为
 
 ```md
 ---
-title: Projects
-date: 2019-07-30 10:34:53
 layout: projects
 ---
 ```
@@ -72,15 +72,11 @@ layout: projects
 
 ```md
 ---
-title: tags
-date: 2019-08-16 15:34:49
 layout: tags
 ---
 ```
 
-4. 在 `source` 目录下添加 `avatar.png` 图片
-
-5. 修改你的 Hexo 博客的配置，示例如下
+4. 修改你的 Hexo 博客的配置，示例如下
 
 ```yml
 # 博客设置
@@ -103,6 +99,8 @@ sns:
 track:
   ga: xxxxxxxxxxxxxx
 ```
+
+5. 在 `source` 目录下添加 `avatar.png` 图片
 
 ### 本地运行
 

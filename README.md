@@ -18,7 +18,7 @@ In my opinion the main content of the blog should be text, but many Hexo themes 
 
 - night mode
 - PWA (progressive web application)
-- Utteranc comment System
+- [Utteranc](https://utteranc.es/) comment System
 - Mobile friendly
 - English/Chinese
 
@@ -55,17 +55,17 @@ theme: cold-stone
 3. Craete pages you need
 
 ```sh
-hexo new page proejcts
+hexo new page projects
 
 hexo new page tags
+
+hexo new page about
 ```
 
 Add the layout of `source/projects/index.md` to
 
 ```md
 ---
-title: Projects
-date: 2019-07-30 10:34:53
 layout: projects
 ---
 ```
@@ -74,45 +74,43 @@ Add the layout of `source/tags/index.md` to
 
 ```md
 ---
-title: tags
-date: 2019-08-16 15:34:49
 layout: tags
 ---
 ```
 
-4. Add a `avatar.png` image to the `source` directory
-
-5. Modify the configuration of your Hexo blog, examples are as follows
+4. Modify the configuration of your Hexo blog, examples are as follows
 
 ```yml
-# 博客设置
+# blog config
 seo_title: 冷石的博客
 project_dir: projects
 
-# 用户设置
+# user config
 avatar: avatar.png
 
-# Utteranc 评论系统
+# Utteranc comment system
 comment:
   repo: xrr2016/blog
 
-# 社交平台链接：
+# sns link：
 sns:
   github: xrr2016
   juejin: 576666b7207703006b1e0f09
 
-# 博客访问数据
+# page stat
 track:
   ga: xxxxxxxxxxxxxx
 ```
 
-### 本地运行
+5. Add a `avatar.png` image to the `source` directory
+
+### Run local
 
 ```sh
 hexo server
 ```
 
-### 发布
+### Deploy
 
 - install hexo-deployer-git
 
@@ -139,7 +137,7 @@ More ways to refer：https://hexo.io/docs/deployment
 
 ## Using
 
-[冷石的博客](https://coldstone.fun) 💯
+[cold stone's blog](https://coldstone.fun) 💯
 
 ![audits](images/audits.gif)
 
