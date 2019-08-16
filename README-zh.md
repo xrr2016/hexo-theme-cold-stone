@@ -1,4 +1,4 @@
-# Cold Stone
+# Cold Stone :tada:
 
 一个简洁，文字为主的 [Hexo](https://hexo.io/zh-cn) 博客主题
 
@@ -50,7 +50,7 @@ theme: cold-stone
 
 2. 将 `themes/cold-stone` 目录下的 `icons` 移动到 `source` 目录下
 
-3. 新建需要的页面
+3. 在项目根目录执行以下命令，新建需要的页面
 
 ```sh
 hexo new page projects
@@ -76,7 +76,7 @@ layout: tags
 ---
 ```
 
-4. 修改你的 Hexo 博客的配置，示例如下
+4. 修改你的 Hexo 博客的配置 `_congfig.yml`，示例如下
 
 ```yml
 # 博客设置

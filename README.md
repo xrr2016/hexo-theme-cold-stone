@@ -1,4 +1,4 @@
-# Cold Stone
+# Cold Stone :tada:
 
 A simple, clean, text-based [Hexo](https://hexo.io) blog theme.
 
@@ -52,7 +52,7 @@ theme: cold-stone
 
 2. Move `icons` in the `themes/cold-stone` directory to the `source` directory
 
-3. Craete pages you need
+3. Execute the following command at the project root directory, craete pages you need
 
 ```sh
 hexo new page projects
@@ -78,7 +78,7 @@ layout: tags
 ---
 ```
 
-4. Modify the configuration of your Hexo blog, examples are as follows
+4. Modify the configuration of your Hexo blog `_congfig.yml`, examples are as follows
 
 ```yml
 # blog config
