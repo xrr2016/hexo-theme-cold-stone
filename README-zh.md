@@ -42,6 +42,11 @@ theme: cold-stone
 
 [冷石的博客](https://coldstone.fun/)
 
+# TODOS
+
+[] 搜索功能
+[] 分类页面
+
 ## 协议
 
 [MIT](LICENSE)

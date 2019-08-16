@@ -12,15 +12,25 @@ document.addEventListener('DOMContentLoaded', event => {
 
 // theme
 const body = document.body
+const head = document.getElementsByTagName('head')[0]
 const toggle = document.getElementById('toggle')
 const theme = localStorage.getItem('theme')
 
+let link = document.createElement('link')
+link.rel = 'stylesheet'
+link.href =
+  'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css'
+
 if (theme === 'dark') {
+  link.href =
+    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css'
   if (toggle) {
     toggle.checked = true
   }
   body.classList.add('dark')
 }
+
+head.append(link)
 
 if (toggle) {
   toggle.addEventListener('change', event => {

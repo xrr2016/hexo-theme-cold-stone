@@ -13,10 +13,9 @@
     <title><%_ if (page.title) { %><%= page.title + ' - ' + config.SEOTitle %><% } else {%><%= config.SEOTitle %><% } _%></title>
     <base href="/">
     <link rel="manifest" href="<%= config.root %>manifest.json">
-    <link rel="shortcut icon" href="<%= config.root %>images/favicon.ico">
+    <link rel="shortcut icon" href="<%= config.root %>images/icon-192x192.png">
     <link rel="apple-touch-icon" href="<%= config.root %>icons/icon-192x192.png">
     <%- css(['styles/sanitize.css', 'styles/cold-stone.css']) %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/github.min.css" />
     <noscript>
       <p class="text-center">你的浏览器还没开启 Javascript 功能！</p>
     </noscript>
