@@ -1,7 +1,11 @@
 <header class="header">
   <div class="wrapper">
-    <h1 class=" title">
-      <span class="title-brand"><%- __('title') %></span>
+    <h1 class="title">
+      <% if(config.title) { %>
+        <span class="title-brand"><%= config.title %></span>
+      <% } else { %>
+        <span class="title-brand"><%- __('title') %></span>
+      <% } %>
       <input class="offscreen" type="checkbox" id="toggle" name="toggle" aria-label="toggle" /><label for="toggle" class="switch"></label>
     </h1>
   </div>
