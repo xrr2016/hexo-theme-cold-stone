@@ -57,6 +57,8 @@ theme: cold-stone
 ```sh
 hexo new page projects
 
+hexo new page categories
+
 hexo new page tags
 
 hexo new page about
@@ -67,6 +69,14 @@ Add the layout of `source/projects/index.md`
 ```md
 ---
 layout: projects
+---
+```
+
+Add the layout of `source/categories/index.md`
+
+```md
+---
+layout: categories
 ---
 ```
 
@@ -145,7 +155,7 @@ More ways to refer：https://hexo.io/docs/deployment
 
 - [ ] Search
 
-- [ ] Category
+- [x] Category
 
 - [ ] Show page views
 

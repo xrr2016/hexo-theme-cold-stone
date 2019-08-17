@@ -76,7 +76,7 @@ if (utteranc) {
 
 // nav item
 const path = location.pathname
-const navs = ['/', '/projects/', '/tags/', '/archives/', '/about/']
+const navs = ['/', '/projects/', '/categories/' '/tags/', '/archives/', '/about/']
 const navLinkList = document.querySelectorAll('.nav-link')
 
 navs.forEach(function(nav, index) {

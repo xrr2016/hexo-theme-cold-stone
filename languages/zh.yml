@@ -1,4 +1,4 @@
-title: 冷石的博客
+title: 你的博客标题
 
 nav:
   home: 主页
@@ -6,6 +6,7 @@ nav:
   about: 关于
   projects: 项目
   archives: 存档
+  categories: 分类
 
 post:
   postTime: 发布于

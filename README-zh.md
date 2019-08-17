@@ -55,6 +55,8 @@ theme: cold-stone
 ```sh
 hexo new page projects
 
+hexo new page categories
+
 hexo new page tags
 
 hexo new page about
@@ -65,6 +67,14 @@ hexo new page about
 ```md
 ---
 layout: projects
+---
+```
+
+添加 `source/categories/index.md` 的 layout 配置为
+
+```md
+---
+layout: categories
 ---
 ```
 
@@ -143,7 +153,7 @@ hexo clean && hexo deploy
 
 - [ ] 搜索功能
 
-- [ ] 分类页面
+- [x] 分类页面
 
 - [ ] 显示页面访问量
 

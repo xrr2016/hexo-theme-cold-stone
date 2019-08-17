@@ -1,0 +1,26 @@
+<ul class="tags list-unstyled">
+    <% site.categories.map(function(category){  %>
+        <li class="tag-item"><a href="<%= config.root %>categories/#<%= category.name %>" title="<%= category.name %>" rel="<%= category.length %>"><%= category.name %></a></li>
+    <% }) %>
+</ul>
+
+<!-- 分类列表 -->
+<ul class="list-unstyled">
+  <% site.categories.map(function(category){  %>
+    <li class="card">
+        <p class="tag-list">
+          <span class="tag-text" id="<%= category.name %>"><%= category.name %></span>
+        </p>
+        <% category.posts.map(function(post){  %>
+            <a class="tag-post-title" href="<%- config.root %><%- post.path %>">
+                <p class="hover-underline-animation">
+                    <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                        return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                    }) _%>
+                </p>
+            </a>
+        <% }) %>
+    </li>
+  <% }) %>
+</ul>
+

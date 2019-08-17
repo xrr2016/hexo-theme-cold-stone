@@ -1,4 +1,4 @@
-title: Cold Stone's Blog
+title: Your Blog Title
 
 nav:
   home: HOME
@@ -6,6 +6,7 @@ nav:
   about: ABOUT
   projects: PROJECTS
   archives: ARCHIVES
+  categories: CATEGORIES
 
 post:
   postTime: Post
