@@ -21,7 +21,6 @@ navs.forEach(function(nav, index) {
   if (nav === path) {
     const item = navLinkList.find(function(item) {
       const link = item.dataset.link
-      console.log('link :', link)
       return link === nav
     })
 
