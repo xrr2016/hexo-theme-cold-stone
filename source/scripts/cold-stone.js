@@ -4,6 +4,31 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
   })
 }
+
+// nav item
+const path = location.pathname
+const navs = [
+  '/',
+  '/projects/',
+  '/categories/',
+  '/tags/',
+  '/archives/',
+  '/about/'
+]
+const navLinkList = Array.from(document.querySelectorAll('.nav-link'))
+
+navs.forEach(function(nav, index) {
+  if (nav === path) {
+    const item = navLinkList.find(function(item) {
+      const link = item.dataset.link
+      console.log('link :', link)
+      return link === nav
+    })
+
+    item.classList.add('active')
+  }
+})
+
 // code highlight
 document.addEventListener('DOMContentLoaded', event => {
   document.querySelectorAll('figure.highlight').forEach(block => {
@@ -47,6 +72,15 @@ if (toggle) {
   })
 }
 
+// article toc
+const tocLinkList = document.querySelectorAll('.toc-link')
+
+tocLinkList.forEach(function(link) {
+  const href = link.href
+  const newHref = href.replace(location.origin + '/', location.href)
+  link.setAttribute('href', newHref)
+})
+
 // comment
 const loader = document.getElementById('loader')
 const utteranc = document.getElementById('utteranc')
@@ -73,30 +107,3 @@ if (utteranc) {
     clearTimeout(timeout)
   }, 2000)
 }
-
-// nav item
-const path = location.pathname
-const navs = [
-  '/',
-  '/projects/',
-  '/categories/',
-  '/tags/',
-  '/archives/',
-  '/about/'
-]
-const navLinkList = document.querySelectorAll('.nav-link')
-
-navs.forEach(function(nav, index) {
-  if (nav === path) {
-    navLinkList[index].classList.add('active')
-  }
-})
-
-// article toc
-const tocLinkList = document.querySelectorAll('.toc-link')
-
-tocLinkList.forEach(function(link) {
-  const href = link.href
-  const newHref = href.replace(location.origin + '/', location.href)
-  link.setAttribute('href', newHref)
-})
