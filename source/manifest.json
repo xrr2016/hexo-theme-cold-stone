@@ -1,6 +1,6 @@
 {
-  "name": "冷石的博客",
-  "short_name": "冷石博客",
+  "name": "你的博客标题",
+  "short_name": "博客标题",
   "theme_color": "#606266",
   "background_color": "#ffffff",
   "display": "standalone",
