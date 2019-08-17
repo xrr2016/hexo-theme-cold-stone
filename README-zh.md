@@ -10,7 +10,7 @@
 
 ![responsive](images/response.png)
 
-[预览地址](https://coldstone.fun)
+[链接](https://coldstone.fun)
 
 ## 特性
 

@@ -13,7 +13,7 @@ layout: layout
             </a>
 
             <p class="post-meta">
-                <%_ if (post.tags.length){ %>
+                <%_ if (post.tags){ %>
                     <%= __('post.tags') _%>：
                     <% post.tags.forEach(function(tag){ %>
                         <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>

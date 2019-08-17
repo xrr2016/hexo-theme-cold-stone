@@ -12,7 +12,7 @@ In my opinion the main content of the blog should be text, but many Hexo themes 
 
 ![responsive](images/response.png)
 
-[preview address](https://coldstone.fun)
+[Link](https://coldstone.fun)
 
 ## Feature
 
