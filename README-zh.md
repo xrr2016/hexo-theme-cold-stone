@@ -107,7 +107,7 @@ sns:
 
 # 博客访问数据
 track:
-  ga: xxxxxxxxxxxxxx
+  gaid: xxxxxxxxxxxxxx
 ```
 
 5. 在 `source` 目录下添加 `avatar.png` 图片

@@ -109,7 +109,7 @@ sns:
 
 # page stat
 track:
-  ga: xxxxxxxxxxxxxx
+  gaid: xxxxxxxxxxxxxx
 ```
 
 5. Add a `avatar.png` image to the `source` directory
