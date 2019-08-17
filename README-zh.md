@@ -153,6 +153,4 @@ hexo clean && hexo deploy
 
 [MIT](LICENSE)
 
-## 附言
-
 如果觉得这个主题不错，请个这个仓库一个 star 吧

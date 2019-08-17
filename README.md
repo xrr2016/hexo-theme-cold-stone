@@ -62,7 +62,7 @@ hexo new page tags
 hexo new page about
 ```
 
-Add the layout of `source/projects/index.md` to
+Add the layout of `source/projects/index.md`
 
 ```md
 ---
@@ -70,7 +70,7 @@ layout: projects
 ---
 ```
 
-Add the layout of `source/tags/index.md` to
+Add the layout of `source/tags/index.md`
 
 ```md
 ---
@@ -154,7 +154,5 @@ More ways to refer：https://hexo.io/docs/deployment
 ## License
 
 [MIT](LICENSE)
-
-## PS
 
 If you think this theme is no bad, please star this repo.
