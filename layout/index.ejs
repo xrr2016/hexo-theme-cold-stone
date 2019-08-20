@@ -1,9 +1,9 @@
 ---
 layout: layout
 ---
-<ul class="list-unstyled">
+<ul class="list-unstyled animate-list">
     <% page.posts.each(function(post) { %>
-        <li class="post-item card">
+        <li class="post-item card slide-in-right">
             <a class="post-anchor" href="<%- config.root %><%- post.path %>">
                 <h2 class="post-title hover-underline-animation">
                     <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){

@@ -487,3 +487,50 @@ img::selection {
   pointer-events: none;
   color: var(--text-gray);
 }
+
+/* animate */
+.slide-in-right {
+  animation: slideInRight 0.3s linear both;
+}
+
+.animate-list li:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.animate-list li:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+
+.animate-list li:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+.animate-list li:nth-of-type(4) {
+  animation-delay: 0.25s;
+}
+
+.animate-list li:nth-of-type(5) {
+  animation-delay: 0.3s;
+}
+
+.animate-list li:nth-of-type(6) {
+  animation-delay: 0.35s;
+}
+
+.animate-list li:nth-of-type(7) {
+  animation-delay: 0.4s;
+}
+
+.animate-list li:nth-of-type(8) {
+  animation-delay: 0.45s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(1%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
