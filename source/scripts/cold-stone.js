@@ -7,26 +7,23 @@ if ('serviceWorker' in navigator) {
 
 // nav item
 const path = location.pathname
-const navs = [
-  '/',
-  '/projects/',
-  '/categories/',
-  '/tags/',
-  '/archives/',
-  '/about/'
-]
 const navLinkList = Array.from(document.querySelectorAll('.nav-link'))
+const navs = ['/projects/', '/categories/', '/tags/', '/archives/', '/about/']
 
-navs.forEach(function(nav, index) {
-  if (nav === path) {
-    const item = navLinkList.find(function(item) {
-      const link = item.dataset.link
-      return link === nav
-    })
+if (path === '/' || /page/.test(path)) {
+  navLinkList[0].classList.add('active')
+} else {
+  navs.forEach(function(nav, index) {
+    if (nav === path) {
+      const item = navLinkList.find(function(item) {
+        const link = item.dataset.link
+        return link === nav
+      })
 
-    item.classList.add('active')
-  }
-})
+      item.classList.add('active')
+    }
+  })
+}
 
 // code highlight
 document.addEventListener('DOMContentLoaded', event => {
