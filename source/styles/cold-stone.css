@@ -534,3 +534,28 @@ img::selection {
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* paginator */
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paginator .page-number {
+  display: inline-block;
+  width: 2rem;
+  text-align: center;
+}
+.page-number.current {
+  pointer-events: none;
+  color: var(--text-gray);
+}
+
+.paginator .extend {
+  flex: 1;
+}
+
+.paginator .extend.next {
+  text-align: right;
+}

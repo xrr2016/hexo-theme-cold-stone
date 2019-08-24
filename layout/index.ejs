@@ -25,19 +25,28 @@ layout: layout
     <% }); _%>
 </ul>
 
-<ul class="list-unstyled pager">
-    <li class="left">
-        <% if (page.prev){ %>
-          <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
-        <% } else { %>
-          <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
-        <% } %>
-    </li>
-    <li class="right">
-        <% if (page.next){ %>
-          <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
-        <% } else { %>
-          <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
-        <% } %>
-    </li>
-</ul>
+<% if(page.total > 2) { %>
+   <nav class="paginator">
+        <%- paginator({
+            prev_text: '&larr; 上一页',
+            next_text: '下一页 &rarr;'
+        }) %>
+   </nav>
+<% } else { %>
+    <ul class="list-unstyled pager">
+        <li class="left">
+            <% if (page.prev){ %>
+            <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+            <% } else { %>
+            <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+            <% } %>
+        </li>
+        <li class="right">
+            <% if (page.next){ %>
+            <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+            <% } else { %>
+            <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+            <% } %>
+        </li>
+    </ul>
+<% } %>
