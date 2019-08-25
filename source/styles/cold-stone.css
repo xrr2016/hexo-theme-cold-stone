@@ -47,6 +47,7 @@ body {
       transparent
     );
   background-size: 50px 50px;
+  overflow-x: hidden;
 }
 
 body.dark {
