@@ -52,7 +52,7 @@ theme: cold-stone
 
 2. Move `icons` in the `themes/cold-stone` directory to the `source` directory
 
-3. Execute the following command at the project root directory, craete pages you need
+3. Execute the following command at the project root directory, create pages you need
 
 ```sh
 hexo new page projects
