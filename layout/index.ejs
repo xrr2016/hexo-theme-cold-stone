@@ -3,22 +3,23 @@ layout: layout
 ---
 <ul class="list-unstyled animate-list">
     <% page.posts.each(function(post) { %>
-        <li class="post-item card slide-in-right">
-            <a class="post-anchor" href="<%- config.root %><%- post.path %>">
-                <h2 class="post-title hover-underline-animation">
+        <li class="animate-list__item card slide-in-right">
+            <a class="animate-list__link" href="<%- config.root %><%- post.path %>">
+                <h2 class="animate-list__title hover-underline-animation">
                     <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
                         return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
                     }) _%>
                 </h2>
             </a>
 
-            <p class="post-meta">
-                <%_ if (post.tags){ %>
+            <p class="animate-list__desc">
+                <% if (post.tags) { %>
                     <%= __('post.tags') _%>：
                     <% post.tags.forEach(function(tag){ %>
                         <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
                     <% }) %>
                 <% } %>
+                &nbsp;
                 <%= __('post.postTime') %>：<%= post.date.format(config.date_format) %>
             </p>
         </li>

@@ -198,22 +198,10 @@ a {
   padding-bottom: 0.5rem;
 }
 
-.post-meta {
-  font-size: 0.9rem;
-}
-
-.post-title {
-  margin: 0;
-}
-
 @media screen and (max-width: 768px) {
   .post-title {
     font-size: 1rem;
   }
-}
-
-.post-meta {
-  margin: 0;
 }
 
 .list-unstyled {
@@ -368,7 +356,6 @@ img::selection {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  margin: 0;
 }
 
 .hover-underline-animation::after {
@@ -472,16 +459,8 @@ img::selection {
 }
 
 /* project-list */
-.project-list h2 {
-  margin: 0;
-}
-
-.project-item {
+.project-link {
   display: block;
-}
-
-.project-item p {
-  margin: 0;
 }
 
 .link-disabled {
@@ -492,6 +471,21 @@ img::selection {
 /* animate */
 .slide-in-right {
   animation: slideInRight 0.3s linear both;
+}
+
+.animate-list__link {
+  display: block;
+}
+
+.animate-list__title {
+  margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.animate-list__desc {
+  margin: 0;
 }
 
 .animate-list li:nth-of-type(1) {
@@ -559,4 +553,16 @@ img::selection {
 
 .paginator .extend.next {
   text-align: right;
+}
+
+.tag-name,
+.category-name,
+.archive-name {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.archive-date {
+  font-style: italic;
+  padding-right: .5rem;
 }
