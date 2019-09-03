@@ -479,6 +479,7 @@ img::selection {
 
 .animate-list__title {
   margin-top: 0;
+  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
