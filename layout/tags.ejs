@@ -8,7 +8,7 @@
 <ul class="list-unstyled animate-list">
   <% site.tags.map(function(tag){  %>
     <li class="card slide-in-right">
-        <p class="tag-name"><%= tag.name %></p>
+        <h2 class="tag-name"><%= tag.name %></h2>
         <% tag.posts.map(function(post){  %>
             <a class="tag-post-title" href="<%- config.root %><%- post.path %>">
                 <p class="hover-underline-animation">

@@ -341,6 +341,14 @@ img::selection {
   display: block;
 }
 
+.tag-post-title p {
+  margin: 0.5rem 0;
+}
+
+.tag-post-title:last-of-type p {
+  margin-bottom: 0;
+}
+
 /* archives */
 .archives {
   padding: 0;
@@ -401,7 +409,7 @@ img::selection {
 }
 
 .about-link {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   font-size: 0.9rem;
 }
 
@@ -565,5 +573,5 @@ img::selection {
 
 .archive-date {
   font-style: italic;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }

@@ -17,7 +17,7 @@ site.posts.sort('date').reverse().forEach(function(post){
 <ul class="archives list-unstyled animate-list">
     <% Object.keys(years).reverse().forEach(function(year){  %>
         <li class="card slide-in-right">
-            <p class="archive-name"><%= year %><p>
+            <h2 class="archive-name"><%= year %></h2>
             <ul class="list-unstyled">
                 <% years[year].map(function(post){  %>
                 <li>
