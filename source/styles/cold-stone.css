@@ -215,10 +215,7 @@ a {
   justify-content: space-between;
 }
 
-.footer {
-  padding: 3rem;
-  text-align: center;
-}
+
 
 /* code  */
 figure.highlight {
@@ -574,4 +571,21 @@ img::selection {
 .archive-date {
   font-style: italic;
   padding-right: 0.5rem;
+}
+
+/* footer */
+.footer {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .theme-link {
+  text-decoration: underline;
 }

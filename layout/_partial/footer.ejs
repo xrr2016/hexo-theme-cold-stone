@@ -1,5 +1,10 @@
 <footer class="footer">
-  <p>Copyright &copy; <a href="/"><%= config['url'] %></a> 2019</p>
+  <div class="footer-content wrapper">
+    <p>Copyright &copy; 2019 <a class="theme-link" href="https://github.com/xrr2016/hexo-theme-cold-stone" target="_blank">Theme Cold Stone</a>  </p>
+    <p class="pv">
+      <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    </p>
+  </div>
 </footer>
 
 <%- partial('_partial/variable', null, {cache: false}) %>
@@ -7,6 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 <%- js('scripts/cold-stone.js') %>
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <% if(config.track.gaid) { %>
   <script src=https://www.googletagmanager.com/gtag/js?id=<%= config.track.gaid %>"></script>
   <script>
