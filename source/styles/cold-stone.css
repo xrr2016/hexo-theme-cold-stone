@@ -577,7 +577,7 @@ img::selection {
 /* footer */
 .footer {
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: #fff;
   box-shadow: 0 0.4rem 0.8rem -0.1rem rgba(0, 32, 128, 0.1), 0 0 0 1px #f0f2f7;
 }

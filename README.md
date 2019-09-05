@@ -157,7 +157,7 @@ More ways to refer：https://hexo.io/docs/deployment
 
 - [x] Category
 
-- [x] Show page views
+- [ ] Show page views
 
 - [ ] Friends link page
 
