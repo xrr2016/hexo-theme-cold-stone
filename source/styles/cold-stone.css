@@ -19,7 +19,13 @@
   text-shadow: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   color: var(--text-black);
   background-color: var(--bg-white);
   background-image: linear-gradient(
@@ -184,6 +190,10 @@ a {
   .nav-link {
     font-size: 0.7rem;
   }
+}
+
+.main {
+  flex: 1;
 }
 
 .card {
@@ -542,6 +552,7 @@ img::selection {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .paginator .page-number {
