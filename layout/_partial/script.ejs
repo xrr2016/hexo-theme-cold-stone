@@ -1,4 +1,9 @@
-<%- partial('_partial/variable', null, {cache: false}) %>
+<script>
+	window.COLD_STONE = {
+	  repo: "<%- config.comment.repo %>",
+	  gaid: "<%- config.track.gaid %>"
+	}
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 <%- js('scripts/cold-stone.js') %>
