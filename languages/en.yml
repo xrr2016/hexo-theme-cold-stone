@@ -12,6 +12,7 @@ post:
   postTime: Post
   updateTime: LastUpdate
   tags: Tags
+  more: Read more
 
 search:
   search: search

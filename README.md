@@ -39,7 +39,7 @@ npm install
 ### Install theme
 
 ```sh
-git clone https://github.com/xrr2016/hexo-theme-cold-stone.git themes/cold-stone
+git clone https://github.com/xrr2016/hexo-theme-cold-stone.git themes/cold-stone --depth 1
 ```
 
 ### Usage
