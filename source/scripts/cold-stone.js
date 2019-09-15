@@ -103,3 +103,26 @@ if (utteranc) {
     clearTimeout(timeout)
   }, 2000)
 }
+
+// back-to-top
+const backTop = document.getElementById('backTop')
+
+if (backTop) {
+  window.addEventListener('scroll', () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.scrollingElement
+
+    if (scrollTop + clientHeight >= scrollHeight) {
+      backTop.classList.add('show')
+    } else {
+      backTop.classList.remove('show')
+    }
+  })
+
+  backTop.addEventListener('click', function() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  })
+}

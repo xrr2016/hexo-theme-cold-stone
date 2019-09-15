@@ -4,23 +4,27 @@ layout: layout
 <ul class="list-unstyled animate-list">
     <% page.posts.each(function(post) { %>
         <li class="animate-list__item card slide-in-right">
-            <a class="animate-list__link" href="<%- config.root %><%- post.path %>">
-                <h2 class="animate-list__title hover-underline-animation">
-                    <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
-                        return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-                    }) _%>
-                </h2>
-            </a>
-
+            <h2 class="animate-list__title">
+                <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                }) _%>
+            </h2>
+            <p><%- post.excerpt %></p>
             <p class="animate-list__desc">
-                <% if (post.tags) { %>
-                    <%= __('post.tags') _%>：
-                    <% post.tags.forEach(function(tag){ %>
-                        <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                    <% }) %>
-                <% } %>
-                &nbsp;
-                <%= __('post.postTime') %>：<%= post.date.format(config.date_format) %>
+                <span class="post-info">
+                    <% if (post.tags) { %>
+                        <span><%= __('post.tags') _%>:</span>
+                        <span class="meta-tags">
+                        <% post.tags.forEach(function(tag){ %>
+                            <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                        <% }) %>
+                        </span>
+                    <% } %>
+                    <span><%= __('post.postTime') %>:</span>
+                    <span class="post-time"><%= post.date.format(config.date_format) _%></span>
+                </span>
+
+                <a class="read-more hover-underline-animation" href="<%- config.root %><%- post.path %>"><%= __('post.more') _%></a>
             </p>
         </li>
     <% }); _%>

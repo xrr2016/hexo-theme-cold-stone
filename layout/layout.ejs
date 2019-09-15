@@ -8,6 +8,11 @@
 
     <main class="main wrapper"><%- body %></main>
 
-    <%- partial('_partial/footer', null, {cache: true}) %>
+
+    <% if (!is_post()) { %>
+      <%- partial('_partial/footer', null, {cache: true}) %>
+    <% } %>
+
+    <%- partial('_partial/script', null, {cache: true}) %>
   </body>
 </html>

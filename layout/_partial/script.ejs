@@ -1,0 +1,17 @@
+<%- partial('_partial/variable', null, {cache: false}) %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+<%- js('scripts/cold-stone.js') %>
+
+<% if(config.track.gaid) { %>
+  <script src="https://www.googletagmanager.com/gtag/js?id=<%= config.track.gaid %>"></script>
+
+  <script>
+	window.dataLayer = window.dataLayer || []
+	function gtag() {
+		dataLayer.push(arguments)
+	}
+	gtag('js', new Date())
+	gtag('config', window.COLD_STONE.gaid)
+  </script>
+<% } %>

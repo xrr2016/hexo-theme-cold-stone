@@ -18,11 +18,12 @@
       <a  class="meta-link" href="/">返回</a>
     </p>
   </section>
-  <section><%- page.content %></section>
-  <section class="card article-toc">
-    <%- toc(page.content, {list_number	: false }) %>
-  </section>
+  <section><%- page.more %></section>
 </article>
+
+<section class="card article-toc">
+  <%- toc(page.more, {list_number	: false }) %>
+</section>
 
 <section class="article slide-in-right">
 
@@ -37,4 +38,5 @@
   <noscript>为正常使用评论功能请激活 JavaScript</noscript>
 </section>
 
+<%- partial('_partial/top', { path: page.path }, {cache: true}) %>
 
