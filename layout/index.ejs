@@ -1,57 +1,80 @@
 ---
 layout: layout
 ---
-<ul class="list-unstyled animate-list">
-    <% page.posts.each(function(post) { %>
-        <li class="animate-list__item card slide-in-right">
-            <h2 class="animate-list__title">
-                <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
-                    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-                }) _%>
-            </h2>
-            <p><%- post.excerpt %></p>
-            <p class="animate-list__desc">
-                <span class="post-info">
-                    <% if (post.tags) { %>
-                        <span><%= __('post.tags') _%>:</span>
-                        <span class="meta-tags">
-                        <% post.tags.forEach(function(tag){ %>
-                            <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                        <% }) %>
+
+<section class="index-content">
+    <div class="index-post-list">
+        <ul class="index-list list-unstyled animate-list">
+            <% page.posts.each(function(post) { %>
+                <li class="animate-list__item card slide-in-right">
+                    <h2 class="animate-list__title">
+                        <a class="hover-underline-animation" href="<%- config.root %><%- post.path %>">
+                            <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                                return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                            }) _%>
+                        </a>
+                    </h2>
+                    <p><%- post.excerpt %></p>
+                    <p class="animate-list__desc">
+                        <span class="post-info">
+                            <% if (post.tags) { %>
+                                <span><%= __('post.tags') _%>:</span>
+                                <span class="meta-tags">
+                                <% post.tags.forEach(function(tag){ %>
+                                    <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                                <% }) %>
+                                </span>
+                            <% } %>
+                            <span><%= __('post.postTime') %>:</span>
+                            <span class="post-time"><%= post.date.format(config.date_format) _%></span>
                         </span>
+                    </p>
+                </li>
+            <% }); _%>
+        </ul>
+
+        <% if(page.total > 2) { %>
+            <nav class="paginator">
+                    <%- paginator({
+                        prev_text: '&larr; 上一页',
+                        next_text: '下一页 &rarr;'
+                    }) %>
+            </nav>
+            <% } else { %>
+            <ul class="list-unstyled pager">
+                <li class="left">
+                    <% if (page.prev){ %>
+                    <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+                    <% } else { %>
+                    <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
                     <% } %>
-                    <span><%= __('post.postTime') %>:</span>
-                    <span class="post-time"><%= post.date.format(config.date_format) _%></span>
-                </span>
+                </li>
+                <li class="right">
+                    <% if (page.next){ %>
+                    <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+                    <% } else { %>
+                    <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+                    <% } %>
+                </li>
+            </ul>
+        <% } %>
+    </div>
 
-                <a class="read-more hover-underline-animation" href="<%- config.root %><%- post.path %>"><%= __('post.more') _%></a>
-            </p>
-        </li>
-    <% }); _%>
-</ul>
+    <aside class="index-aside">
+        <%- partial('_partial/search', null, {cache: true}) %>
 
-<% if(page.total > 2) { %>
-   <nav class="paginator">
-        <%- paginator({
-            prev_text: '&larr; 上一页',
-            next_text: '下一页 &rarr;'
-        }) %>
-   </nav>
-<% } else { %>
-    <ul class="list-unstyled pager">
-        <li class="left">
-            <% if (page.prev){ %>
-            <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
-            <% } else { %>
-            <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
-            <% } %>
-        </li>
-        <li class="right">
-            <% if (page.next){ %>
-            <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
-            <% } else { %>
-            <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
-            <% } %>
-        </li>
-    </ul>
-<% } %>
+        <div class="card aside-tags">
+            <ul class="tags list-unstyled">
+                <% site.tags.map(function(tag){  %>
+                    <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a></li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="card">
+            <p class="subtitle">博客总字数&#58; <%= totalcount(site) %></p>
+        </div>
+    </aside>
+</section>
+
+
+

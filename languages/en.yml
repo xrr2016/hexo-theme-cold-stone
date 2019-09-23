@@ -5,14 +5,17 @@ nav:
   tags: TAGS
   about: ABOUT
   projects: PROJECTS
+  friends: FRIENDS
   archives: ARCHIVES
   categories: CATEGORIES
 
 post:
   postTime: Post
-  updateTime: LastUpdate
+  updateTime: Last Update
   tags: Tags
   more: Read more
+  wordCount: Word Count
+  readingTime: Reading Time
 
 search:
   search: search

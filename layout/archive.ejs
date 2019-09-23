@@ -18,7 +18,7 @@ site.posts.sort('date').reverse().forEach(function(post){
     <% Object.keys(years).reverse().forEach(function(year){  %>
         <li class="card slide-in-right">
             <h2 class="archive-name"><%= year %></h2>
-            <ul class="list-unstyled">
+            <ul class="archive-list list-unstyled">
                 <% years[year].map(function(post){  %>
                 <li>
                     <span class="archive-date"><%= post.date.format('MM-DD') %></span>

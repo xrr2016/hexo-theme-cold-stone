@@ -7,8 +7,15 @@ if ('serviceWorker' in navigator) {
 
 // nav item
 const path = location.pathname
-const navLinkList = Array.from(document.querySelectorAll('.nav-link'))
-const navs = ['/projects/', '/categories/', '/tags/', '/archives/', '/about/']
+const navLinkList = Array.from(document.querySelectorAll('.nav-list-item'))
+const navs = [
+  '/projects/',
+  '/categories/',
+  '/tags/',
+  '/archives/',
+  '/about/',
+  '/friends/'
+]
 
 if (path === '/' || /page/.test(path)) {
   navLinkList[0].classList.add('active')
@@ -20,7 +27,9 @@ if (path === '/' || /page/.test(path)) {
         return link === nav
       })
 
-      item.classList.add('active')
+      if (item) {
+        item.classList.add('active')
+      }
     }
   })
 }
