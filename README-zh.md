@@ -112,6 +112,12 @@ track:
 
 5. 在 `source` 目录下添加 `avatar.png` 图片
 
+6. 安装 hexo-wordcount (字数统计)
+
+```sh
+npm i --save hexo-wordcount
+```
+
 ### 本地运行
 
 ```sh
@@ -164,7 +170,7 @@ hexo clean && hexo deploy
 v2019-09-23
 
 - 修改了 PC 端首页布局
-- 新增了文章字数统计功能
+- 新增了文章字数统计功能 (需要在仓库目录安装 hexo-wordcount)
 - PC 端添加了 Google 站内搜索
 - 新增了友链页面
 

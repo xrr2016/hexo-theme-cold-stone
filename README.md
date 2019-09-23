@@ -114,6 +114,13 @@ track:
 
 5. Add a `avatar.png` image to the `source` directory
 
+
+6. Install hexo-wordcount (word count)
+
+```sh
+npm i --save hexo-wordcount
+```
+
 ### Run local
 
 ```sh
@@ -166,7 +173,7 @@ More ways to refer：https://hexo.io/docs/deployment
 v2019-09-23
 
 - Modified PC home page layout
-- Added article word count function
+- Added article word count function (need install hexo-wordcount under blog folder)
 - Added Google Site Search on the PC side
 - Added friends chain page
 
