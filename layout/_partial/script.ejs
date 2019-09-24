@@ -1,9 +1,15 @@
 <script>
 	window.COLD_STONE = {
-	  repo: "<%- config.comment.repo %>",
+	  repo: "",
 	  gaid: "<%- config.track.gaid %>"
 	}
 </script>
+
+<% if(config.comment.repo) { %>
+	<script>
+		window.COLD_STONE.repo = "<%- config.comment.repo %>"
+	</script>
+<% } %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 <%- js('scripts/cold-stone.js') %>
