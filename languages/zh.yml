@@ -17,5 +17,4 @@ post:
   wordCount: 字数
   readingTime: 阅读时间
 
-search:
-  search: 搜索
+search: 搜索

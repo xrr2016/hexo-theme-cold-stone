@@ -170,6 +170,11 @@ More ways to refer：https://hexo.io/docs/deployment
 
 ## Release log
 
+v2019-09-25
+
+- Added homepage loading animation
+- Reduced body content width
+
 v2019-09-23
 
 - Modified PC home page layout

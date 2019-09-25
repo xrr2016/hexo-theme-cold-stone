@@ -1,6 +1,6 @@
-<div class="card">
-	<form class="search-form" action="https://www.google.com/search" target="_blank">
-		<input class="search-input" placeholder="🔍搜索" maxlength="40" name="q" />
-		<input type='hidden' name='sitesearch' value="<%= config.url %>" />
-	</form>
-</div>
+<section class="card">
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form" target="_blank">
+      <input type="search" name="q" class="search-form-input" placeholder="<%- __('search') %>">
+      <input type="hidden" name="sitesearch" value="<%= config.url %>">
+   </form>
+</section>

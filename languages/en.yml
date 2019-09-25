@@ -17,5 +17,4 @@ post:
   wordCount: Word Count
   readingTime: Reading Time
 
-search:
-  search: search
+search: Search
