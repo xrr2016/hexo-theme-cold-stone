@@ -1,20 +1,16 @@
 # Cold Stone :tada:
 
-一个简洁，文字为主的 [Hexo](https://hexo.io/zh-cn) 博客主题
-
-## 前言
-
-个人认为博客的主要内容应该是文字，但是很多 Hexo 主题带有大量的图片，容易分散读者的注意力，而一些以文字为主的主题功能都有些简陋，因此 Cold Stone 主题诞生了！
+一个简洁，清爽，文字为主的 [Hexo](https://hexo.io/zh-cn) 博客主题
 
 ## 预览
 
-![responsive](images/response.png)
+![demo](images/demo.gif)
 
-[链接](https://coldstone.fun)
+[预览地址](https://coldstone.fun)
 
 ## 特性
 
-- 夜间模式
+- 自动切换夜间模式
 - PWA（渐进式应用）
 - [Utteranc](https://utteranc.es/) 评论系统
 - 移动端友好
@@ -167,6 +163,12 @@ hexo clean && hexo deploy
 
 ## 发布日志
 
+v2019-09-30
+
+- 修改导航栏样式
+- 增加了首页加载动画时间
+- 根据系统主题自动设置夜间模式
+
 v2019-09-25
 
 - 添加了首页加载动画
@@ -183,4 +185,4 @@ v2019-09-23
 
 [MIT](LICENSE)
 
-如果觉得这个主题不错，请个这个仓库一个 star 吧
+如果觉得这个主题不错，请个这个仓库一个 star 吧。😎

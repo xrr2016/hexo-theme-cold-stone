@@ -1,22 +1,18 @@
 # Cold Stone :tada:
 
-A simple, clean, text-based [Hexo](https://hexo.io) blog theme.
+A simple, refreshing, text-based [Hexo](https://hexo.io/zh-cn) blog theme.
 
 [中文文档](README-zh.md)
 
-## Foreword
-
-In my opinion the main content of the blog should be text, but many Hexo themes with a lot of pictures, easy to distract the reader's attention, and some of the text-based theme features are somewhat simple, so the Cold Stone theme was born!
-
 ## Preview
 
-![responsive](images/response.png)
+![demo](images/demo.gif)
 
-[Link](https://coldstone.fun)
+[Preview Link](https://coldstone.fun)
 
 ## Feature
 
-- night mode
+- Auto night mode
 - PWA (progressive web application)
 - [Utteranc](https://utteranc.es/) comment System
 - Mobile friendly
@@ -170,6 +166,12 @@ More ways to refer：https://hexo.io/docs/deployment
 
 ## Release log
 
+V2019-09-30
+
+- Modify the navigation bar style
+- Increse homepage loading animation time
+- Automatically set night mode according to system theme
+
 v2019-09-25
 
 - Added homepage loading animation
@@ -186,4 +188,4 @@ v2019-09-23
 
 [MIT](LICENSE)
 
-If you think this theme is no bad, please star this repo.
+If you think this theme is no bad, please star this repo. 😎

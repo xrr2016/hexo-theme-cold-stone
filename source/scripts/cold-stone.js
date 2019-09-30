@@ -41,42 +41,6 @@ document.addEventListener('DOMContentLoaded', event => {
   })
 })
 
-// toggle theme
-const body = document.body
-const head = document.getElementsByTagName('head')[0]
-const toggle = document.getElementById('toggle')
-const theme = localStorage.getItem('theme')
-
-let link = document.createElement('link')
-link.rel = 'stylesheet'
-link.href =
-  'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css'
-
-if (theme === 'dark') {
-  link.href =
-    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css'
-  if (toggle) {
-    toggle.checked = true
-  }
-  body.classList.add('dark')
-}
-
-head.append(link)
-
-if (toggle) {
-  toggle.addEventListener('change', event => {
-    const target = event.target
-
-    if (target.checked) {
-      body.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      body.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
-  })
-}
-
 // article toc
 const tocLinkList = document.querySelectorAll('.toc-link')
 

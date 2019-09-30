@@ -1,26 +1,24 @@
 <% if (config.author) { %>
+	<canvas class="prelude" id="prelude"></canvas>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<%- js('scripts/leon.js') %>
 
 	<script>
-		const ONE_HOUR = 60 * 60 * 1000
+		let leon
 
-		let leon, canvas, ctx
+		const ANIMATE_TIME = 3 // seconds
+		const THREE_MINUTE = 3 * 60 * 1000
 
 		const sw = window.innerWidth
 		const sh = window.innerHeight
 		const pixelRatio = window.devicePixelRatio
+		const canvas = document.getElementById('prelude')
+		const ctx = canvas.getContext('2d')
+		const animatedTime = localStorage.getItem('animatedTime')
 
 		function init() {
-		  canvas = document.createElement('canvas')
-		  canvas.classList.add('prelude')
-		  document.body.appendChild(canvas)
-		  ctx = canvas.getContext('2d')
-
 		  canvas.width = sw * pixelRatio
 		  canvas.height = sh * pixelRatio
-		  canvas.style.width = sw + 'px'
-		  canvas.style.height = sh + 'px'
 		  ctx.scale(pixelRatio, pixelRatio)
 
 		  leon = new LeonSans({
@@ -51,7 +49,7 @@
 			for (let i = 0; i < total; i++) {
 				TweenMax.fromTo(
 					leon.drawing[i],
-					1.6,
+					ANIMATE_TIME,
 					{ value: 0 },
 					{
 						delay: i * 0.05,
@@ -66,14 +64,14 @@
 				clearTimeout(timeout)
 				document.body.removeChild(canvas)
 				localStorage.setItem('animatedTime', Date.now())
-			}, 1600)
+			}, ANIMATE_TIME * 1000)
 		}
 
-		const animatedTime = localStorage.getItem('animatedTime')
-
-		if(!animatedTime || Date.now() > parseInt(animatedTime) + ONE_HOUR) {
+		if(!animatedTime || Date.now() > parseInt(animatedTime) + THREE_MINUTE) {
 			init()
 			animate()
+		} else {
+			document.body.removeChild(canvas)
 		}
 	</script>
 <% } %>
