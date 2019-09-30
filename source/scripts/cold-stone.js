@@ -62,19 +62,14 @@ if (utteranc) {
   uscript.src = 'https://utteranc.es/client.js'
   uscript.setAttribute('repo', window.COLD_STONE.repo)
   uscript.setAttribute('issue-term', 'pathname')
-
-  if (theme === 'dark') {
-    uscript.setAttribute('theme', 'github-dark')
-  } else {
-    uscript.setAttribute('theme', 'github-light')
-  }
-
+  uscript.setAttribute('theme', 'github-light')
   utteranc.appendChild(uscript)
+
   // 假装在加载
   const timeout = setTimeout(function() {
     loader.remove()
     clearTimeout(timeout)
-  }, 2000)
+  }, 3000)
 }
 
 // back-to-top
