@@ -1,0 +1,28 @@
+title: ブログタイトル
+
+nav:
+  home: ホーム
+  tags: タグ
+  about: 私について
+  friends: 友達
+  projects: プロジェクト
+  archives: アーカイブ
+  categories: カテゴリー
+
+post:
+  postTime: 作成日時
+  updateTime: 更新日時
+  tags: タグ
+  more: もっと読む
+  wordCount: 文字数
+  readingTime: 閲覧時間
+
+search: 検索
+
+page: 
+  previous: 前へ
+  next: 次へ
+
+blogwordcount: ブログ総文字数
+
+back: 戻る
