@@ -10,7 +10,10 @@
       <%- partial('_partial/header', null, {cache: true}) %>
     <% } %>
 
-    <main class="main wrapper"><%- body %></main>
+    <main class="main wrapper">
+      <%- body %>
+      <%- partial('_partial/google_adsense') %>
+    </main>
 
     <% if (!is_post()) { %>
       <%- partial('_partial/footer', null, {cache: true}) %>
