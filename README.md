@@ -4,6 +4,8 @@ A simple, refreshing, text-based [Hexo](https://hexo.io/zh-cn) blog theme.
 
 [中文文档](README-zh.md)
 
+[日本語ドキュメント](README-ja.md)
+
 ## Preview
 
 ![demo](images/demo.gif)
