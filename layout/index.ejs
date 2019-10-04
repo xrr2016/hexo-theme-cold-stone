@@ -36,24 +36,24 @@ layout: layout
         <% if(page.total > 2) { %>
             <nav class="paginator">
                     <%- paginator({
-                        prev_text: '&larr; 上一页',
-                        next_text: '下一页 &rarr;'
+                        prev_text: '&larr; ←',
+                        next_text: '→ &rarr;'
                     }) %>
             </nav>
             <% } else { %>
             <ul class="list-unstyled pager">
                 <li class="left">
                     <% if (page.prev){ %>
-                    <a  href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+                    <a  href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
                     <% } else { %>
-                    <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; 上一页</a>
+                    <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
                     <% } %>
                 </li>
                 <li class="right">
                     <% if (page.next){ %>
-                    <a  href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+                    <a  href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
                     <% } else { %>
-                    <a class="link-disabled" href="<%- config.root %><%- page.next_link %>">下一页 &rarr;</a>
+                    <a class="link-disabled" href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
                     <% } %>
                 </li>
             </ul>
@@ -71,7 +71,7 @@ layout: layout
             </ul>
         </div>
         <div class="card">
-            <p class="subtitle">博客总字数&#58; <%= totalcount(site) %></p>
+            <p class="subtitle"><%= __('blogwordcount') %>&#58; <%= totalcount(site) %></p>
         </div>
     </aside>
 </section>

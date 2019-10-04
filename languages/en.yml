@@ -18,3 +18,11 @@ post:
   readingTime: Reading Time
 
 search: Search
+
+page: 
+  previous: previous
+  next: next
+
+blogwordcount: Blog Word Count
+
+back: Back

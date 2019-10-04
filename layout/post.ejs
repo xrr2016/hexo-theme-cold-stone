@@ -13,7 +13,7 @@
         <span><%= __('post.wordCount') %>&#58; <%= wordcount(page.more) %></span>
         <span><%= __('post.readingTime') %>&#58; <%= min2read(page.more) %> min</span>
       </span>
-      <a  class="meta-link" href="/">返回</a>
+      <a  class="meta-link" href="/"><%= __('back') %></a>
     </p>
   </section>
   <section><%- page.more %></section>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="comment" id="utteranc"></div>
-  <noscript>为正常使用评论功能请激活 JavaScript</noscript>
+  <noscript>Please activate JavaScript for normal use of comments</noscript>
 </section>
 
 <a class="card back-to-top" id="backTop">&UpArrow;</a>
