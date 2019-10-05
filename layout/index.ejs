@@ -66,7 +66,7 @@ layout: layout
         <div class="card aside-tags">
             <ul class="tags list-unstyled">
                 <% site.tags.map(function(tag){  %>
-                    <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a></li>
+                    <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>">#<%= tag.name %></a></li>
                 <% }) %>
             </ul>
         </div>

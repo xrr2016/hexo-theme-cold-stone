@@ -1,9 +1,3 @@
-<ul class="tags list-unstyled">
-    <% site.categories.map(function(category){  %>
-        <li class="tag-item"><a href="<%= config.root %>categories/#<%= category.name %>" title="<%= category.name %>" rel="<%= category.length %>"><%= category.name %></a></li>
-    <% }) %>
-</ul>
-
 <!-- 分类列表 -->
 <ul class="list-unstyled animate-list">
   <% site.categories.map(function(category){  %>
