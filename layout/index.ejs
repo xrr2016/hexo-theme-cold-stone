@@ -36,24 +36,24 @@ layout: layout
         <% if(page.total > 2) { %>
             <nav class="paginator">
                     <%- paginator({
-                        prev_text: '&larr; ←',
-                        next_text: '→ &rarr;'
+                        prev_text: '&larr;',
+                        next_text: '&rarr;'
                     }) %>
             </nav>
             <% } else { %>
             <ul class="list-unstyled pager">
                 <li class="left">
                     <% if (page.prev){ %>
-                    <a  href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
+                      <a  href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
                     <% } else { %>
-                    <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
+                      <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
                     <% } %>
                 </li>
                 <li class="right">
                     <% if (page.next){ %>
-                    <a  href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
+                      <a  href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
                     <% } else { %>
-                    <a class="link-disabled" href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
+                      <a class="link-disabled" href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
                     <% } %>
                 </li>
             </ul>
