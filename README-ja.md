@@ -44,9 +44,9 @@ git clone https://github.com/dongsu-iis/hexo-theme-cold-stone.git themes/cold-st
 theme: cold-stone
 ```
 
-2.  `themes/cold-stone` フォルダ配下の `icons` フォルダを `source` フォルダの中へ移動する
+2. `themes/cold-stone` フォルダ配下の `icons` フォルダを `source` フォルダの中へ移動する
 
-3.  プロジェクトの親フォルダにて下記のコマンドを実行し、新しいページを作成する
+3. プロジェクトの親フォルダにて下記のコマンドを実行し、新しいページを作成する
 
 ```sh
 hexo new page projects

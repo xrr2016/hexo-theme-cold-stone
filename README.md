@@ -112,7 +112,7 @@ track:
 
 5. Add a `avatar.png` image to the `source` directory
 
-6。Install hexo-wordcount (word count)
+6. Install hexo-wordcount (word count)
 
 ```sh
 npm i --save hexo-wordcount
