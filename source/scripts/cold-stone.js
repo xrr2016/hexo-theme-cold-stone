@@ -68,6 +68,15 @@ if (utteranc) {
   }, 3000)
 }
 
+// back
+const back = document.getElementById('back')
+
+if (back) {
+  back.addEventListener('click', function() {
+    history.back()
+  })
+}
+
 // back-to-top
 const backTop = document.getElementById('backTop')
 

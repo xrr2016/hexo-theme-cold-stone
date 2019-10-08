@@ -13,7 +13,7 @@
         <span><%= __('post.wordCount') %>&#58; <%= wordcount(page.more) %></span>
         <span><%= __('post.readingTime') %>&#58; <%= min2read(page.more) %> min</span>
       </span>
-      <a  class="hover-underline-animation" href="/"><%= __('back') %></a>
+      <a class="hover-underline-animation" id="back" ><%= __('back') %></a>
     </p>
   </section>
   <section class="article-content"><%- page.more %></section>

@@ -162,6 +162,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0;
 }
 
 /* img */
@@ -439,6 +440,7 @@ img::selection {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 0;
 }
 
 .paginator .page-number {
