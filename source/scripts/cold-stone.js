@@ -34,12 +34,8 @@ if (path === '/' || /page/.test(path)) {
   })
 }
 
-// code highlight
-document.addEventListener('DOMContentLoaded', event => {
-  document.querySelectorAll('figure.highlight').forEach(block => {
-    hljs.highlightBlock(block)
-  })
-})
+// highlight
+hljs.initHighlightingOnLoad()
 
 // article toc
 const tocLinkList = document.querySelectorAll('.toc-link')
@@ -93,4 +89,77 @@ if (backTop) {
       behavior: 'smooth'
     })
   })
+}
+
+// leon
+const canvas = document.getElementById('prelude')
+
+if (canvas) {
+  let leon
+
+  const ANIMATE_TIME = 2 // seconds
+  const THREE_MINUTE = 3 * 60 * 1000
+
+  const sw = window.innerWidth
+  const sh = window.innerHeight
+  const pixelRatio = window.devicePixelRatio
+  const ctx = canvas.getContext('2d')
+  const animatedTime = localStorage.getItem('animatedTime')
+
+  function init() {
+    canvas.width = sw * pixelRatio
+    canvas.height = sh * pixelRatio
+    ctx.scale(pixelRatio, pixelRatio)
+
+    leon = new LeonSans({
+      text: 'Cold Stone',
+      color: ['#000000'],
+      size: 80,
+      weight: 200
+    })
+
+    requestAnimationFrame(draw)
+  }
+
+  function draw(t) {
+    requestAnimationFrame(draw)
+
+    ctx.clearRect(0, 0, sw, sh)
+
+    const x = (sw - leon.rect.w) / 2
+    const y = (sh - leon.rect.h) / 2
+    leon.position(x, y)
+
+    leon.draw(ctx)
+  }
+
+  function animate() {
+    const total = leon.drawing.length
+
+    for (let i = 0; i < total; i++) {
+      TweenMax.fromTo(
+        leon.drawing[i],
+        ANIMATE_TIME,
+        { value: 0 },
+        {
+          delay: i * 0.05,
+          value: 1,
+          ease: Power4.easeOut
+        }
+      )
+    }
+
+    const timeout = setTimeout(function() {
+      clearTimeout(timeout)
+      document.body.removeChild(canvas)
+      localStorage.setItem('animatedTime', Date.now())
+    }, ANIMATE_TIME * 1000)
+  }
+
+  if (!animatedTime || Date.now() > parseInt(animatedTime) + THREE_MINUTE) {
+    init()
+    animate()
+  } else {
+    document.body.removeChild(canvas)
+  }
 }

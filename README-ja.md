@@ -46,7 +46,7 @@ theme: cold-stone
 
 2.  `themes/cold-stone` フォルダ配下の `icons` フォルダを `source` フォルダの中へ移動する
 
-3. プロジェクトの親フォルダにて下記のコマンドを実行し、新しいページを作成する
+3.  プロジェクトの親フォルダにて下記のコマンドを実行し、新しいページを作成する
 
 ```sh
 hexo new page projects
@@ -58,7 +58,7 @@ hexo new page tags
 hexo new page about
 ```
 
- `source/projects/index.md` ファイルに以下のコードを追加します
+`source/projects/index.md` ファイルに以下のコードを追加します
 
 ```md
 ---
@@ -82,7 +82,7 @@ layout: tags
 ---
 ```
 
-4. 以下のようにHexo ブログの設定情報を修正する `_congfig.yml`
+4. 以下のように Hexo ブログの設定情報を修正する `_congfig.yml`
 
 ```yml
 # ブログ情報
@@ -115,6 +115,12 @@ track:
 npm i --save hexo-wordcount
 ```
 
+7. hexo-all-minifier (ブログコードを圧縮する)をインストール
+
+```sh
+npm i --save hexo-all-minifier
+```
+
 ### ローカル環境にて実行
 
 ```sh
@@ -138,7 +144,7 @@ deploy:
   branch: gh-pages
 ```
 
-デプロイcommand
+デプロイ command
 
 ```sh
 hexo clean && hexo deploy
@@ -164,6 +170,13 @@ hexo clean && hexo deploy
 
 ## 変更履歴
 
+v2019-10-08
+
+- 日本語のインターフェースとドキュメントを追加、@ [dongsu-iis](https://github.com/dongsu-iis) に感謝
+- コードの強調表示を修正＃[issue](https://github.com/xrr2016/hexo-theme-cold-stone/issues/7)、hexo に付属するコードの強調表示を無効にする必要があります
+- [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier#readme) を追加して、ブログコードを圧縮し、ブログをより速く開きます。
+- 記事ラベルスタイル、記事内のリンクスタイルを更新 v
+
 v2019-09-30
 
 - ナビゲーションバーのレイアウトを修正
@@ -177,8 +190,8 @@ v2019-09-25
 
 v2019-09-23
 
-- PC側のトップページレイアウト修正
-- 文字数計算機能 (hexo-wordcountのインストールが必要)
+- PC 側のトップページレイアウト修正
+- 文字数計算機能 (hexo-wordcount のインストールが必要)
 - PC 側では Google 検索機能を追加
 - フレンドリーリンクページの新規作成
 
@@ -186,4 +199,4 @@ v2019-09-23
 
 [MIT](LICENSE)
 
-もしこのテーマが良いと思ったら、このリポジトリーにstarをください😎
+もしこのテーマが良いと思ったら、このリポジトリーに star をください 😎

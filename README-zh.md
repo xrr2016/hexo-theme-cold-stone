@@ -114,6 +114,12 @@ track:
 npm i --save hexo-wordcount
 ```
 
+7. 安装 hexo-all-minifier (压缩博客代码)
+
+```sh
+npm i --save hexo-all-minifier
+```
+
 ### 本地运行
 
 ```sh
@@ -162,6 +168,13 @@ hexo clean && hexo deploy
 - [x] 友站链接页面
 
 ## 发布日志
+
+v2019-10-08
+
+- 添加了日文语言界面及文档，感谢 @[dongsu-iis](https://github.com/dongsu-iis)
+- 修复代码高亮问题 #[issue](https://github.com/xrr2016/hexo-theme-cold-stone/issues/7)，需要禁用 hexo 自带的代码高亮
+- 添加 [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier#readme) 压缩博客代码，让博客更快的打开
+- 更新了文章标签样式，文章内链接样式
 
 v2019-09-30
 
