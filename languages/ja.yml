@@ -16,10 +16,11 @@ post:
   more: もっと読む
   wordCount: 文字数
   readingTime: 閲覧時間
+  notMore: それ以上
 
 search: 検索
 
-page: 
+page:
   previous: 前へ
   next: 次へ
 

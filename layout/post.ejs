@@ -13,11 +13,14 @@
         <span><%= __('post.wordCount') %>&#58; <%= wordcount(page.more) %></span>
         <span><%= __('post.readingTime') %>&#58; <%= min2read(page.more) %> min</span>
       </span>
-      <a class="hover-underline-animation" id="back" ><%= __('back') %></a>
+      <a class="meta-link hover-underline-animation" id="back" ><%= __('page.previous') %></a>
+      <a class="meta-link hover-underline-animation" href="<%- config.root %>"><%= __('nav.home') %></a>
     </p>
   </section>
   <section class="article-content"><%- page.more %></section>
 </article>
+
+<%- partial('_partial/prev_next', null, {cache: true}) %>
 
 <section class="card article-toc">
   <%- toc(page.more, {list_number	: false }) %>

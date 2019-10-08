@@ -175,6 +175,7 @@ v2019-10-08
 - 日本語のインターフェースとドキュメントを追加、@ [dongsu-iis](https://github.com/dongsu-iis) に感謝
 - コードの強調表示を修正＃[issue](https://github.com/xrr2016/hexo-theme-cold-stone/issues/7)、hexo に付属するコードの強調表示を無効にする必要があります
 - [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier#readme) を追加して、ブログコードを圧縮し、ブログをより速く開きます。
+- 記事に前/次のリンクを追加 🔗
 - 記事ラベルスタイル、記事内のリンクスタイルを更新 v
 
 v2019-09-30

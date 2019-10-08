@@ -1,4 +1,4 @@
-<% if (config.author) { %>
+<% if (config.author && is_home()) { %>
   <canvas class="prelude" id="prelude"></canvas>
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <%- js('scripts/leon.js') %>

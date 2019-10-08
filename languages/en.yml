@@ -16,10 +16,11 @@ post:
   more: Read more
   wordCount: Word Count
   readingTime: Reading Time
+  notMore: Not More
 
 search: Search
 
-page: 
+page:
   previous: previous
   next: next
 

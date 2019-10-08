@@ -178,6 +178,7 @@ v2019-10-08
 - Added Japanese language interface and documentation, thanks @[dongsu-iis](https://github.com/dongsu-iis)
 - Fix code highlighting #[issue](https://github.com/xrr2016/hexo-theme-cold-stone/issues/7), need to disable the code highlighting that comes with hexo
 - Added [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier#readme) to compress your blog code and let your blog open faster
+- Add a previous/next link in the article🔗
 - Updated article label style, link style within article
 
 V2019-09-30

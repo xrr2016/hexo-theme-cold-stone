@@ -46,14 +46,14 @@ layout: layout
                     <% if (page.prev){ %>
                       <a  href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
                     <% } else { %>
-                      <a class="link-disabled" href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
+                      <a class="link-disabled">&larr; <%= __('page.previous') %></a>
                     <% } %>
                 </li>
                 <li class="right">
                     <% if (page.next){ %>
                       <a  href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
                     <% } else { %>
-                      <a class="link-disabled" href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
+                      <a class="link-disabled"><%= __('page.next') %> &rarr;</a>
                     <% } %>
                 </li>
             </ul>

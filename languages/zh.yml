@@ -1,7 +1,7 @@
 title: 你的博客标题
 
 nav:
-  home: 主页
+  home: 首页
   tags: 标签
   about: 关于
   friends: 友链
@@ -16,10 +16,11 @@ post:
   more: 阅读全文
   wordCount: 字数
   readingTime: 阅读时间
+  notMore: 没有更多了
 
 search: 搜索
 
-page: 
+page:
   previous: 上一页
   next: 下一页
 
