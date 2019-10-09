@@ -20,7 +20,7 @@
   <section class="article-content"><%- page.more %></section>
 </article>
 
-<%- partial('_partial/prev_next', null, {cache: true}) %>
+<%- partial('_partial/prev_next', null, {cache: false}) %>
 
 <section class="card article-toc">
   <%- toc(page.more, {list_number	: false }) %>

@@ -1,15 +1,15 @@
-<% if (page.prev || page.next){ %>
-	<section class="prev-next card slide-in-right">
-	  <% if (page.prev) { %>
+<section class="prev-next card slide-in-right">
+	<% if (page.prev) { %>
 		<a href="<%- config.root %><%- page.prev.path %>" class="link prev hover-underline-animation" title="<%= page.prev.title %>">&larr; <%= page.prev.title %></a>
-	  <% } else { %>
+	<% } else { %>
 		<a class="link-disabled link">&larr; <%= __('post.notMore') %></a>
-	  <% } %>
-	  <span class="link-disabled">&VerticalLine;</span>
-	  <% if (page.next){ %>
+	<% } %>
+
+	<span class="link-disabled">&VerticalLine;</span>
+
+	<% if (page.next){ %>
 		<a href="<%- config.root %><%- page.next.path %>" class="link next hover-underline-animation" title="<%= page.next.title %>"><%= page.next.title %> &rarr;</a>
-	  <% } else { %>
+	<% } else { %>
 		<a class="link-disabled link"><%= __('post.notMore') %> &rarr;</a>
-	  <% } %>
-	</section>
-<% } %>
+	<% } %>
+</section>
