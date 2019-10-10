@@ -174,7 +174,7 @@ v2019-10-10
 - 添加博客访问量统计
 - 修改了文章字体统计显示位置
 - 增加了博客文章数量显示
-- 修复 safari 首页动画报错问题
+- 修复 safari 首页动画报错问题 [issue8](https://github.com/xrr2016/hexo-theme-cold-stone/issues/8)
 
 v2019-10-08
 

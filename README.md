@@ -178,7 +178,7 @@ v2019-10-10
 - Add blog traffic statistics
 - Modified the article font statistics display position
 - Added the number of blog posts to display
-- Fixed safari homepage error reporting
+- Fixed safari homepage error reporting [issue8](https://github.com/xrr2016/hexo-theme-cold-stone/issues/8)
 
 v2019-10-08
 
