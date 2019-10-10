@@ -17,6 +17,7 @@ post:
   wordCount: Word Count
   readingTime: Reading Time
   notMore: Not More
+  readed: Readed
 
 search: Search
 
@@ -24,6 +25,9 @@ page:
   previous: previous
   next: next
 
-blogwordcount: Blog Word Count
+blog:
+  totalpost: Total
+  wordcount: Blog Word Count
+  visitcount: Blog Visit Count
 
 back: Back

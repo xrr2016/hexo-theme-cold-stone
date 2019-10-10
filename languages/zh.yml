@@ -17,6 +17,7 @@ post:
   wordCount: 字数
   readingTime: 阅读时间
   notMore: 没有更多了
+  readed: 阅读量
 
 search: 搜索
 
@@ -24,6 +25,9 @@ page:
   previous: 上一页
   next: 下一页
 
-blogwordcount: 博客总字数
+blog:
+  totalpost: 共计
+  wordcount: 博客总字数
+  visitcount: 博客访客数
 
 back: 返回

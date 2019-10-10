@@ -2,9 +2,9 @@
   <div class="wrapper header-content">
     <h1 class="title nav-list-item" data-link="<%= url_for(config.root) %>">
       <% if(config.title) { %>
-        <a href="<%= url_for(config.root) %>" data-link="<%= url_for(config.root) %>"><%= config.title %></a>
+        <a href="<%= config.root %>" data-link="<%= config.root %>"><%= config.title %></a>
       <% } else { %>
-        <a href="<%= url_for(config.root) %>" data-link="<%= url_for(config.root) %>"><%- __('title') %></a>
+        <a href="<%= config.root %>" data-link="<%= config.root %>"><%- __('title') %></a>
       <% } %>
     </h1>
     <ul class="nav-list">

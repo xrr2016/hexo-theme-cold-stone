@@ -13,25 +13,28 @@ site.posts.sort('date').reverse().forEach(function(post){
 });
 %>
 
-<!-- 归档列表 -->
-<ul class="archives list-unstyled animate-list">
-    <% Object.keys(years).reverse().forEach(function(year){  %>
-        <li class="card slide-in-right">
-            <h2 class="archive-name"><%= year %></h2>
-            <ul class="archive-list list-unstyled">
-                <% years[year].map(function(post){  %>
-                <li>
-                    <span class="archive-date"><%= post.date.format('MM-DD') %></span>
-                    <a href="<%- config.root %><%- post.path %>">
-                        <span class="hover-underline-animation">
-                            <%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
-                                return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-                            }) %>
-                        </span>
-                    </a>
-                </li>
-            <% }) %>
-            </ul>
-        </li>
-    <% }) %>
-</ul>
+<section class="animate-list">
+    <div class="card slide-in-right"><%= __('blog.totalpost') %>&#58; <%= site.posts.length %></div>
+    <!-- 归档列表 -->
+    <ul class="archives list-unstyled ">
+        <% Object.keys(years).reverse().forEach(function(year){  %>
+            <li class="card slide-in-right">
+                <h2 class="archive-name"><%= year %></h2>
+                <ul class="archive-list list-unstyled">
+                    <% years[year].map(function(post){  %>
+                    <li>
+                        <span class="archive-date"><%= post.date.format('MM-DD') %></span>
+                        <a href="<%- config.root %><%- post.path %>">
+                            <span class="hover-underline-animation">
+                                <%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                                    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                                }) %>
+                            </span>
+                        </a>
+                    </li>
+                <% }) %>
+                </ul>
+            </li>
+        <% }) %>
+    </ul>
+</section>

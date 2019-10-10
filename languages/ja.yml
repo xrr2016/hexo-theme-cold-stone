@@ -17,6 +17,7 @@ post:
   wordCount: 文字数
   readingTime: 閲覧時間
   notMore: それ以上
+  readed: 読書量
 
 search: 検索
 
@@ -24,6 +25,9 @@ page:
   previous: 前へ
   next: 次へ
 
-blogwordcount: ブログ総文字数
+blog:
+  totalpost: 合計
+  wordcount: ブログ総文字数
+  visitcount: ブログ訪問者数
 
 back: 戻る

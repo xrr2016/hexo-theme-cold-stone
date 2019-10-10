@@ -1,7 +1,8 @@
 // service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    const path = window.COLD_STONE.root + 'sw.js'
+    navigator.serviceWorker.register(path)
   })
 }
 
@@ -9,12 +10,12 @@ if ('serviceWorker' in navigator) {
 const path = location.pathname
 const navLinkList = Array.from(document.querySelectorAll('.nav-list-item'))
 const navs = [
-  '/projects/',
-  '/categories/',
   '/tags/',
-  '/archives/',
   '/about/',
-  '/friends/'
+  '/friends/',
+  '/projects/',
+  '/archives/',
+  '/categories/'
 ]
 
 if (path === '/' || /page/.test(path)) {
@@ -104,16 +105,16 @@ if (backTop) {
 const canvas = document.getElementById('prelude')
 
 if (canvas) {
-  let leon
+  var leon
 
-  const ANIMATE_TIME = 2 // seconds
-  const THREE_MINUTE = 3 * 60 * 1000
+  var ANIMATE_TIME = 2 // seconds
+  var THREE_MINUTE = 3 * 60 * 1000
 
-  const sw = window.innerWidth
-  const sh = window.innerHeight
-  const pixelRatio = window.devicePixelRatio
-  const ctx = canvas.getContext('2d')
-  const animatedTime = localStorage.getItem('animatedTime')
+  var sw = window.innerWidth
+  var sh = window.innerHeight
+  var ctx = canvas.getContext('2d')
+  var pixelRatio = window.devicePixelRatio
+  var animatedTime = localStorage.getItem('animatedTime')
 
   function init() {
     canvas.width = sw * pixelRatio
@@ -121,25 +122,23 @@ if (canvas) {
     ctx.scale(pixelRatio, pixelRatio)
 
     leon = new LeonSans({
-      text: 'Cold Stone',
+      text: window.COLD_STONE.author || 'Cold Stone',
       color: ['#000000'],
       size: 80,
       weight: 200
     })
 
-    requestAnimationFrame(draw)
+    draw()
   }
 
-  function draw(t) {
-    requestAnimationFrame(draw)
-
+  function draw() {
     ctx.clearRect(0, 0, sw, sh)
-
     const x = (sw - leon.rect.w) / 2
     const y = (sh - leon.rect.h) / 2
     leon.position(x, y)
-
     leon.draw(ctx)
+
+    requestAnimationFrame(draw)
   }
 
   function animate() {
