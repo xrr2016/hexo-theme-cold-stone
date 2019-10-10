@@ -4,13 +4,13 @@
 			<span class="hover-underline-animation">&larr; <%= page.prev.title %></span>
 		</a>
 	<% } else { %>
-		<a class="link-disabled link">&larr; <%= __('post.notMore') %></a>
+		<a class="link-disabled prev link">&larr; <%= __('post.notMore') %></a>
 	<% } %>
 	<% if (page.next){ %>
 		<a href="<%- config.root %><%- page.next.path %>" class="link next" title="<%= page.next.title %>">
 			<span class="hover-underline-animation"><%= page.next.title %> &rarr;</span>
 		</a>
 	<% } else { %>
-		<a class="link-disabled link"><%= __('post.notMore') %> &rarr;</a>
+		<a class="link-disabled link next"><%= __('post.notMore') %> &rarr;</a>
 	<% } %>
 </section>
