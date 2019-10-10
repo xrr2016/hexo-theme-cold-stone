@@ -1,16 +1,13 @@
 <script>
 	window.COLD_STONE = {
-	  repo: "",
-	  gaid: "<%- config.track.gaid %>"
+		root: "<%= config.root %>",
+		author: "<%- config.author %>" || '',
+		gaid: "<%- config.track.gaid %>" || '',
+		repo: "<%- config.comment.repo %>" || '',
 	}
 </script>
 
-<% if(config.comment.repo) { %>
-	<script>
-		window.COLD_STONE.repo = "<%- config.comment.repo %>"
-	</script>
-<% } %>
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
 <%- js('scripts/cold-stone.js') %>
 

@@ -17,16 +17,17 @@ layout: layout
                     <p><%- post.excerpt %></p>
                     <p class="animate-list__desc">
                         <span class="post-info">
+                            <span><%= __('post.postTime') %>&#58;</span>
+                            <time class="post-time" datetime="<%= post.date.format(config.date_format) _%>"><%= post.date.format(config.date_format) _%></time>&nbsp;
+                            <span><%= __('post.wordCount') %>&#58; <%= wordcount(post.more) %></span>&nbsp;
                             <% if (post.tags) { %>
-                                <span><%= __('post.tags') _%>:</span>
+                                <span><%= __('post.tags') _%>&#58; </span>
                                 <span class="meta-tags">
                                 <% post.tags.forEach(function(tag){ %>
                                     <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
                                 <% }) %>
                                 </span>
                             <% } %>
-                            <span><%= __('post.postTime') %>:</span>
-                            <span class="post-time"><%= post.date.format(config.date_format) _%></span>
                         </span>
                     </p>
                 </li>
@@ -72,7 +73,8 @@ layout: layout
         </div>
 
         <div class="card">
-            <p class="subtitle"><%= __('blogwordcount') %>&#58; <%= totalcount(site) %></p>
+            <p class="subtitle"><%= __('blog.wordcount') %>&#58; <%= totalcount(site) %></p>
+            <p class="subtitle hide" id="busuanzi_container_site_pv"><%= __('blog.visitcount') %>&#58; <span id="busuanzi_value_site_pv"></span></p>
         </div>
     </aside>
 </section>
