@@ -124,6 +124,20 @@ npm i --save hexo-wordcount
 npm i --save hexo-all-minifier
 ```
 
+### RSS
+
+Install hexo-generator-feed (generate rss link)
+
+```sh
+npm i --save hexo-generator-feed
+```
+
+Set rss to true in `_congfig.yml`
+
+```yml
+rss: true
+```
+
 ### Run local
 
 ```sh

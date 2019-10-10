@@ -120,6 +120,20 @@ npm i --save hexo-wordcount
 npm i --save hexo-all-minifier
 ```
 
+### RSS
+
+安装 hexo-generator-feed (生成 rss 链接)
+
+```sh
+npm i --save hexo-generator-feed
+```
+
+在 `_congfig.yml` 设置 rss 为 true
+
+```yml
+rss: true
+```
+
 ### 本地运行
 
 ```sh

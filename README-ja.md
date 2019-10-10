@@ -121,6 +121,20 @@ npm i --save hexo-wordcount
 npm i --save hexo-all-minifier
 ```
 
+### RSS
+
+hexo-generator-feed をインストール（rss リンクを生成）
+
+```sh
+npm i --save hexo-generator-feed
+```
+
+`_congfig.yml` で rss を true に設定します
+
+```yml
+rss：true
+```
+
 ### ローカル環境にて実行
 
 ```sh
