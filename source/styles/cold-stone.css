@@ -251,6 +251,10 @@ img::selection {
   padding-left: 1em;
 }
 
+.article-toc .home-link {
+  margin-top: -0.5rem;
+}
+
 @media screen and (max-width: 768px) {
   .article-meta {
     font-size: 0.8rem;

@@ -14,7 +14,6 @@
         <span class="hide" id="busuanzi_container_page_pv"><%= __('post.readed') %>&#58; <span id="busuanzi_value_page_pv"></span></span>
       </span>
       <a class="meta-link hover-underline-animation" id="back" ><%= __('page.previous') %></a>
-      <a class="meta-link hover-underline-animation" href="<%- config.root %>"><%= __('nav.home') %></a>
     </p>
   </section>
   <section class="article-content"><%- page.more %></section>
@@ -22,8 +21,13 @@
 
 <%- partial('_partial/prev_next', null, {cache: false}) %>
 
-<section class="card article-toc">
-  <%- toc(page.more, {list_number	: false }) %>
+<section class="article-toc">
+  <div class="card">
+    <%- toc(page.more, {list_number	: false }) %>
+  </div>
+  <div class="card home-link">
+    <a class="hover-underline-animation" href="<%- config.root %>"><%= __('back') %><%= __('nav.home') %></a>
+  </div>
 </section>
 
 <section class="article slide-in-right">
