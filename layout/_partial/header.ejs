@@ -29,6 +29,11 @@
       <li class="nav-list-item" data-link="/about/">
         <a class="nav-list-link" href="<%= config.root %><%- 'about/' %>"><%- __('nav.about') %></a>
       </li>
+      <% if(config.rss) { %>
+        <li class="nav-list-item" data-link="/rss/">
+          <a class="nav-list-link" href="<%= config.root %>atom.xml">RSS</a>
+        </li>
+      <% } %>
     </ul>
   </div>
 </header>

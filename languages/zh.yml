@@ -27,7 +27,7 @@ page:
 
 blog:
   totalpost: 共计
-  wordcount: 博客总字数
-  visitcount: 博客访客数
+  wordcount: 总字数
+  visitcount: 访客数
 
 back: 返回

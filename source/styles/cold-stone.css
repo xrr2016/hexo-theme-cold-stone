@@ -74,6 +74,41 @@ a {
   transition: all 0.1s ease;
 }
 
+table {
+  width: 100%;
+  position: relative;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-wrap: break-word;
+  word-break: normal;
+  margin: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  cursor: default;
+}
+
+tbody {
+  margin: 0;
+}
+
+tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+tr th,
+tr td {
+  min-width: 90px;
+  font-size: 14px;
+  white-space: normal;
+  word-wrap: break-word;
+  border: 1px solid #d9d9d9;
+  vertical-align: top;
+  padding: 4px 8px;
+  cursor: default;
+}
+
 .hide {
   display: none;
 }
@@ -252,6 +287,7 @@ img::selection {
 }
 
 .article-toc .home-link {
+  padding: 0.5rem 1rem;
   margin-top: -0.5rem;
 }
 
