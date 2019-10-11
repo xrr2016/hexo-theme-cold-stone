@@ -1,3 +1,6 @@
+@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css" screen;
+@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css" screen and (prefers-color-scheme: dark);
+
 :root {
   --text-black: #303133;
   --text-gray: #909399;

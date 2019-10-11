@@ -1,24 +1,27 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <!-- <meta name="referrer" content="origin-when-cross-origin"> -->
-    <meta name="theme-color" content="#333333">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="google" content="notranslate">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="keyword"  content="<%= config.keywords %>">
-    <meta name="description" content="<%= config.description %>">
-    <title><%_ if (page.title) { %><%= page.title + ' - ' + config.seo_title %><% } else {%><%= config.seo_title %><% } _%></title>
-    <base href="/">
-    <link rel="preconnect" href="//cdnjs.cloudflare.com">
-    <link rel="manifest" href="<%= config.root %>manifest.json">
-    <link rel="shortcut icon" href="<%= config.root %>icons/icon-72x72.png">
-    <link rel="apple-touch-icon" href="<%= config.root %>icons/icon-192x192.png">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css">
-    <%- css(['styles/sanitize.css', 'styles/cold-stone.css']) %>
-    <noscript>
-      <p class="text-center">你的浏览器还没开启 Javascript 功能！</p>
-    </noscript>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <!-- <meta name="referrer" content="origin-when-cross-origin"> -->
+  <meta name="theme-color" content="#333333">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keyword" content="<%= config.keywords %>">
+  <meta name="description" content="<%= config.description %>">
+  <title>
+    <%_ if (page.title) { %><%= page.title + ' - ' + config.seo_title %><% } else {%><%= config.seo_title %><% } _%>
+  </title>
+  <base href="/">
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="manifest" href="<%= config.root %>manifest.json">
+  <link rel="shortcut icon" href="<%= config.root %>icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="<%= config.root %>icons/icon-192x192.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css">
+  <%- css(['styles/sanitize.css', 'styles/cold-stone.css']) %>
+  <noscript>
+    <p class="text-center">你的浏览器还没开启 Javascript 功能！</p>
+  </noscript>
 </head>
