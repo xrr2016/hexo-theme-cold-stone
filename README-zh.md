@@ -131,7 +131,19 @@ npm i --save hexo-generator-feed
 在 `_congfig.yml` 设置 rss 为 true
 
 ```yml
+# RSS
 rss: true
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: avatar.png
+  autodiscovery: true
 ```
 
 ### 本地运行

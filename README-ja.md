@@ -132,7 +132,19 @@ npm i --save hexo-generator-feed
 `_congfig.yml` で rss を true に設定します
 
 ```yml
-rss：true
+# RSS
+rss: true
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: avatar.png
+  autodiscovery: true
 ```
 
 ### ローカル環境にて実行
