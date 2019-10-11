@@ -773,4 +773,8 @@ code {
   .hover-underline-animation::after {
     background-color: #fff;
   }
+  
+  tr:nth-child(2n) {
+    background-color: #4e4a4a;
+  }
 }
