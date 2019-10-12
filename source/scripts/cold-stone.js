@@ -1,3 +1,5 @@
+const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+
 // service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -59,7 +61,11 @@ if (utteranc) {
   uscript.src = 'https://utteranc.es/client.js'
   uscript.setAttribute('repo', window.COLD_STONE.repo)
   uscript.setAttribute('issue-term', 'pathname')
-  uscript.setAttribute('theme', 'github-light')
+  if (isDarkMode) {
+    uscript.setAttribute('theme', 'github-dark')
+  } else {
+    uscript.setAttribute('theme', 'github-light')
+  }
   utteranc.appendChild(uscript)
 
   // 假装在加载
@@ -123,7 +129,7 @@ if (canvas) {
 
     leon = new LeonSans({
       text: window.COLD_STONE.author || 'Cold Stone',
-      color: ['#000000'],
+      color: ['#000'],
       size: 80,
       weight: 200
     })
