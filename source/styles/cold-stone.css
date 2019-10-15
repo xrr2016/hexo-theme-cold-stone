@@ -1,6 +1,3 @@
-@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css" screen;
-@import "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css" screen and (prefers-color-scheme: dark);
-
 :root {
   --text-black: #303133;
   --text-gray: #909399;
@@ -78,18 +75,17 @@ a {
 }
 
 table {
-  width: 100%;
   position: relative;
   table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
   word-wrap: break-word;
   word-break: normal;
-  margin: 0;
-  font-weight: 400;
-  box-sizing: border-box;
-  border: 1px solid #d9d9d9;
+  border-spacing: 0;
   cursor: default;
+  border: 1px solid #d9d9d9;
 }
 
 tbody {
@@ -771,6 +767,14 @@ code {
 
   .navbar a {
     color: #fff;
+  }
+
+  blockquote {
+    color: #fff;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #4e4a4a;
   }
 
   .hover-underline-animation::after {
