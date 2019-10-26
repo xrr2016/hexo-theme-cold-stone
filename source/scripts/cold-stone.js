@@ -37,9 +37,6 @@ if (path === '/' || /page/.test(path)) {
   })
 }
 
-// highlight
-hljs.initHighlightingOnLoad()
-
 // article toc
 const tocLinkList = document.querySelectorAll('.toc-link')
 
@@ -105,75 +102,4 @@ if (backTop) {
       behavior: 'smooth'
     })
   })
-}
-
-// leon
-const canvas = document.getElementById('prelude')
-
-if (canvas) {
-  var leon
-
-  var ANIMATE_TIME = 2 // seconds
-  var THREE_MINUTE = 3 * 60 * 1000
-
-  var sw = window.innerWidth
-  var sh = window.innerHeight
-  var ctx = canvas.getContext('2d')
-  var pixelRatio = window.devicePixelRatio
-  var animatedTime = localStorage.getItem('animatedTime')
-
-  function init() {
-    canvas.width = sw * pixelRatio
-    canvas.height = sh * pixelRatio
-    ctx.scale(pixelRatio, pixelRatio)
-
-    leon = new LeonSans({
-      text: window.COLD_STONE.author || 'Cold Stone',
-      color: ['#000'],
-      size: 80,
-      weight: 200
-    })
-
-    draw()
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, sw, sh)
-    const x = (sw - leon.rect.w) / 2
-    const y = (sh - leon.rect.h) / 2
-    leon.position(x, y)
-    leon.draw(ctx)
-
-    requestAnimationFrame(draw)
-  }
-
-  function animate() {
-    const total = leon.drawing.length
-
-    for (let i = 0; i < total; i++) {
-      TweenMax.fromTo(
-        leon.drawing[i],
-        ANIMATE_TIME,
-        { value: 0 },
-        {
-          delay: i * 0.05,
-          value: 1,
-          ease: Power4.easeOut
-        }
-      )
-    }
-
-    const timeout = setTimeout(function() {
-      clearTimeout(timeout)
-      document.body.removeChild(canvas)
-      localStorage.setItem('animatedTime', Date.now())
-    }, ANIMATE_TIME * 1000)
-  }
-
-  if (!animatedTime || Date.now() > parseInt(animatedTime) + THREE_MINUTE) {
-    init()
-    animate()
-  } else {
-    document.body.removeChild(canvas)
-  }
 }

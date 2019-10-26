@@ -6,58 +6,60 @@ layout: layout
     <div class="index-post-list">
         <ul class="index-list list-unstyled animate-list">
             <% page.posts.each(function(post) { %>
-                <li class="animate-list__item card slide-in-right">
-                    <h2 class="animate-list__title">
-                        <a class="hover-underline-animation" href="<%- config.root %><%- post.path %>">
-                            <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+            <li class="animate-list__item card slide-in-right">
+                <h2 class="animate-list__title">
+                    <a class="hover-underline-animation" href="<%- config.root %><%- post.path %>">
+                        <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
                                 return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
                             }) _%>
-                        </a>
-                    </h2>
-                    <p><%- post.excerpt %></p>
-                    <p class="animate-list__desc">
-                        <span class="post-info">
-                            <span><%= __('post.postTime') %>&#58;</span>
-                            <time class="post-time" datetime="<%= post.date.format(config.date_format) _%>"><%= post.date.format(config.date_format) _%></time>&nbsp;
-                            <span><%= __('post.wordCount') %>&#58; <%= wordcount(post.more) %></span>&nbsp;
-                            <% if (post.tags) { %>
-                                <span><%= __('post.tags') _%>&#58; </span>
-                                <span class="meta-tags">
-                                <% post.tags.forEach(function(tag){ %>
-                                    <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
-                                <% }) %>
-                                </span>
-                            <% } %>
+                    </a>
+                </h2>
+                <p><%- post.excerpt %></p>
+                <p class="animate-list__desc">
+                    <span class="post-info">
+                        <span><%= __('post.postTime') %>&#58;</span>
+                        <time class="post-time"
+                            datetime="<%= post.date.format(config.date_format) _%>"><%= post.date.format(config.date_format) _%></time>&nbsp;
+                        <span><%= __('post.wordCount') %>&#58; <%= wordcount(post.more) %></span>&nbsp;
+                        <% if (post.tags) { %>
+                        <span><%= __('post.tags') _%>&#58; </span>
+                        <span class="meta-tags">
+                            <% post.tags.forEach(function(tag){ %>
+                            <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>"
+                                title="<%= tag.name %>"><%= tag.name %></a>
+                            <% }) %>
                         </span>
-                    </p>
-                </li>
+                        <% } %>
+                    </span>
+                </p>
+            </li>
             <% }); _%>
         </ul>
 
         <% if(page.total > 2) { %>
-            <nav class="paginator">
-                    <%- paginator({
-                        prev_text: '&larr;',
-                        next_text: '&rarr;'
-                    }) %>
-            </nav>
-            <% } else { %>
-            <ul class="list-unstyled pager">
-                <li class="left">
-                    <% if (page.prev){ %>
-                      <a  href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
-                    <% } else { %>
-                      <a class="link-disabled">&larr; <%= __('page.previous') %></a>
-                    <% } %>
-                </li>
-                <li class="right">
-                    <% if (page.next){ %>
-                      <a  href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
-                    <% } else { %>
-                      <a class="link-disabled"><%= __('page.next') %> &rarr;</a>
-                    <% } %>
-                </li>
-            </ul>
+        <nav class="paginator">
+            <%- paginator({
+                prev_text: '←',
+                next_text: '→'
+            }) %>
+        </nav>
+        <% } else { %>
+        <ul class="list-unstyled pager">
+            <li class="left">
+                <% if (page.prev){ %>
+                <a href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('page.previous') %></a>
+                <% } else { %>
+                <a class="link-disabled">&larr; <%= __('page.previous') %></a>
+                <% } %>
+            </li>
+            <li class="right">
+                <% if (page.next){ %>
+                <a href="<%- config.root %><%- page.next_link %>"><%= __('page.next') %> &rarr;</a>
+                <% } else { %>
+                <a class="link-disabled"><%= __('page.next') %> &rarr;</a>
+                <% } %>
+            </li>
+        </ul>
         <% } %>
     </div>
 
@@ -67,13 +69,15 @@ layout: layout
         <div class="card aside-tags">
             <ul class="tags list-unstyled">
                 <% site.tags.map(function(tag){  %>
-                    <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>">#<%= tag.name %></a></li>
+                <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
+                        rel="<%= tag.length %>">#<%= tag.name %></a></li>
                 <% }) %>
             </ul>
         </div>
 
         <div class="card">
-            <p class="subtitle hide" id="busuanzi_container_site_uv"><%= __('blog.visitcount') %>&#58; <span id="busuanzi_value_site_uv"></span></p>
+            <p class="subtitle hide" id="busuanzi_container_site_uv"><%= __('blog.visitcount') %>&#58; <span
+                    id="busuanzi_value_site_uv"></span></p>
             <p class="subtitle"><%= __('blog.wordcount') %>&#58; <%= totalcount(site) %></p>
         </div>
     </aside>

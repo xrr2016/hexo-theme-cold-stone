@@ -693,6 +693,7 @@ blockquote {
   margin: 0;
   padding: 0 1em;
   color: #6a737d;
+  border: 1px solid #e3e3e3;
   border-left: 0.25em solid #dfe2e5;
 }
 

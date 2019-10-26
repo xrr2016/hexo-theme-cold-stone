@@ -2,7 +2,7 @@
 <html lang="<%- config.language %>">
   <%- partial('_partial/head') %>
   <body>
-    <% if (is_home()) { %>
+    <% if (config.author && is_home()) { %>
       <%- partial('_partial/prelude', null, {cache: true}) %>
     <% } %>
 
