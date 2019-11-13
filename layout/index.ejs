@@ -8,7 +8,7 @@ layout: layout
             <% page.posts.each(function(post) { %>
             <li class="animate-list__item card slide-in-right">
                 <h2 class="animate-list__title">
-                    <a class="hover-underline-animation" href="<%- config.root %><%- post.path %>">
+                    <a class="" href="<%- config.root %><%- post.path %>">
                         <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
                                 return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
                             }) _%>
@@ -25,7 +25,7 @@ layout: layout
                         <span><%= __('post.tags') _%>&#58; </span>
                         <span class="meta-tags">
                             <% post.tags.forEach(function(tag){ %>
-                            <a class="meta-tag hover-underline-animation" href="<%= config.root %>tags/#<%= tag.name %>"
+                            <a class="meta-tag" href="<%= config.root %>tags/#<%= tag.name %>"
                                 title="<%= tag.name %>"><%= tag.name %></a>
                             <% }) %>
                         </span>
@@ -76,8 +76,9 @@ layout: layout
         </div>
 
         <div class="card">
-            <p class="subtitle hide" id="busuanzi_container_site_uv"><%= __('blog.visitcount') %>&#58; <span
-                    id="busuanzi_value_site_uv"></span></p>
+            <p class="subtitle hide" id="busuanzi_container_site_uv">
+                <%= __('blog.visitcount') %>&#58; <span id="busuanzi_value_site_uv"></span>
+            </p>
             <p class="subtitle"><%= __('blog.wordcount') %>&#58; <%= totalcount(site) %></p>
         </div>
     </aside>

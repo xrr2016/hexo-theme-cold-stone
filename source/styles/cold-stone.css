@@ -1,11 +1,12 @@
 :root {
   --text-black: #303133;
   --text-gray: #909399;
-  --text-link: #0366d6;
+  --text-link: #1e87f0;
   --bg-white: #f2f3f8;
   --bg-dark: #474444;
   --bg-darken: #3d3b3b;
   --wrapper-width: 920px;
+  --menu-fore-color: #53586a;
   --shadow: 0 0.4rem 0.8rem -0.1rem rgba(0, 32, 128, 0.1), 0 0 0 1px #f0f2f7;
 }
 
@@ -15,22 +16,10 @@
   text-shadow: none;
 }
 
-::selection {
-  color: #fff;
-  background: var(--text-link);
-  text-shadow: none;
-}
-
 html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  color: var(--text-black);
   background-color: var(--bg-white);
   background-image: linear-gradient(
       0deg,
@@ -57,6 +46,12 @@ body {
       transparent
     );
   background-size: 50px 50px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-black);
   overflow-x: hidden;
 }
 
@@ -236,7 +231,6 @@ img::selection {
   align-items: center;
   justify-content: space-between;
   font-size: 0.9rem;
-  margin-bottom: 0.5rem;
 }
 
 .meta-info {
@@ -357,7 +351,7 @@ img::selection {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--text-black);
+  background-color: var(--text-link);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -534,7 +528,6 @@ img::selection {
 
 /* footer */
 .footer {
-  padding: 1rem;
   margin-top: 1rem;
   background-color: #fff;
 }
@@ -654,7 +647,6 @@ img::selection {
 .about-link {
   font-size: 0.8rem;
   margin-right: 0.5rem;
-  border-bottom: 1px solid var(--text-black);
 }
 
 .aside-tags .tags {
@@ -684,9 +676,7 @@ img::selection {
 
 /* code  */
 pre {
-  font-size: 0.8rem;
-  border-radius: 2px;
-  overflow: auto;
+  padding: 0;
 }
 
 blockquote {
@@ -698,10 +688,13 @@ blockquote {
 }
 
 code {
-  padding: 0 4px;
   word-wrap: normal;
   word-break: keep-all;
   white-space: pre;
+}
+
+.hljs {
+  padding: 12px;
 }
 
 /* shadow */
@@ -746,6 +739,7 @@ code {
 /* dark */
 
 @media (prefers-color-scheme: dark) {
+  html,
   body,
   .search-form-input {
     color: #ffffff;
@@ -766,6 +760,13 @@ code {
     border-color: #fff;
   }
 
+  h2,
+  .title,
+  .animate-list__title,
+  .article-title,
+  .article-meta {
+    color: #fff;
+  }
   .navbar a {
     color: #fff;
   }
@@ -781,4 +782,21 @@ code {
   .hover-underline-animation::after {
     background-color: #fff;
   }
+}
+
+
+.menu-button {
+  cursor: pointer;
+  transition: all .3s ease;
+  background: transparent;
+  color: var(--menu-fore-color);
+  display: none;
+  text-align: center;
+  margin: .5rem 0 0;
+  border: none;
+  outline: none;
+}
+
+.menu-button.show {
+  display: block;
 }
