@@ -2,39 +2,30 @@
   <div class="wrapper header-content">
     <h1 class="title nav-list-item" data-link="<%= url_for(config.root) %>">
       <% if(config.title) { %>
-        <a href="<%= config.root %>" data-link="<%= config.root %>"><%= config.title %></a>
+      <a href="<%= config.root %>" data-link="<%= config.root %>"><%= config.title %></a>
       <% } else { %>
-        <a href="<%= config.root %>" data-link="<%= config.root %>"><%- __('title') %></a>
+      <a href="<%= config.root %>" data-link="<%= config.root %>"><%- __('title') %></a>
       <% } %>
     </h1>
     <ul class="nav-list">
       <% if(config.project_dir) { %>
-        <li class="nav-list-item" data-link="<%= url_for(config.project_dir) %>/">
-          <a class="nav-list-link" href="<%= url_for(config.project_dir) %>"><%- __('nav.projects') %></a>
-        </li>
-      <% } %>
-      <% if(config.category_dir) { %>
-        <li class="nav-list-item" data-link="<%= url_for(config.category_dir) %>/">
-          <a class="nav-list-link" href="<%= url_for(config.category_dir) %>"><%- __('nav.categories') %></a>
-        </li>
-      <% } %>
-      <li class="nav-list-item" data-link="<%= url_for(config.archive_dir) %>/">
-        <a class="nav-list-link" href="<%= url_for(config.archive_dir) %>"><%- __('nav.archives') %></a>
+      <li class="nav-list-item" data-link="<%= url_for(config.project_dir) %>/">
+        <a class="nav-list-link" href="<%= url_for(config.project_dir) %>"><%- __('nav.projects') %></a>
       </li>
+      <% } %>
       <% if(config.friends_dir) { %>
-        <li class="nav-list-item" data-link="<%= url_for(config.friends_dir) %>/">
-          <a class="nav-list-link" href="<%= url_for(config.friends_dir) %>"><%- __('nav.friends') %></a>
-        </li>
+      <li class="nav-list-item" data-link="<%= url_for(config.friends_dir) %>/">
+        <a class="nav-list-link" href="<%= url_for(config.friends_dir) %>"><%- __('nav.friends') %></a>
+      </li>
       <% } %>
       <li class="nav-list-item" data-link="/about/">
         <a class="nav-list-link" href="<%= config.root %><%- 'about/' %>"><%- __('nav.about') %></a>
       </li>
       <% if(config.rss) { %>
-        <li class="nav-list-item" data-link="/rss/">
-          <a class="nav-list-link" href="<%= config.root %>atom.xml">RSS</a>
-        </li>
+      <li class="nav-list-item" data-link="/rss/">
+        <a class="nav-list-link" href="<%= config.root %>atom.xml">RSS</a>
+      </li>
       <% } %>
     </ul>
   </div>
 </header>
-
