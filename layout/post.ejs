@@ -1,5 +1,5 @@
 <article class="article slide-in-right">
-  <section>
+  <section class="article-header">
     <h1 class="article-title">
       <%- trim(page.title.replace(/[<>&"]/g, function(c){
         return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
@@ -8,12 +8,14 @@
     <p class="article-meta">
       <span class="meta-info">
         <span>
-          <%= __('post.updateTime') %>&#58;<time class="post-time" datetime="<%= page.updated.format(config.date_format) %>"><%= page.updated.format(config.date_format) %></time>
+          <%= __('post.updateTime') %>&#58;<time class="post-time"
+            datetime="<%= page.updated.format(config.date_format) %>"><%= page.updated.format(config.date_format) %></time>
         </span>
         <span><%= __('post.readingTime') %>&#58; <%= min2read(page.more) %> min</span>
-        <span class="hide" id="busuanzi_container_page_pv"><%= __('post.readed') %>&#58; <span id="busuanzi_value_page_pv"></span></span>
+        <span class="hide" id="busuanzi_container_page_pv"><%= __('post.readed') %>&#58; <span
+            id="busuanzi_value_page_pv"></span></span>
       </span>
-      <a class="meta-link" id="back" ><%= __('page.previous') %></a>
+      <a class="meta-link" id="back"><%= __('page.previous') %></a>
     </p>
   </section>
   <section class="article-content"><%- page.more %></section>
@@ -43,4 +45,3 @@
 </section>
 
 <a class="card back-to-top" id="backTop">&UpArrow;</a>
-

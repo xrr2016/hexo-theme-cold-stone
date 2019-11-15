@@ -222,6 +222,10 @@ img::selection {
   background-color: #ffffff;
 }
 
+.article-header {
+  margin-bottom: 40px;
+}
+
 .article-title {
   margin-top: 0;
 }
@@ -344,7 +348,7 @@ img::selection {
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -680,8 +684,8 @@ pre {
 }
 
 blockquote {
-  margin: 0;
-  padding: 0 1em;
+  font-size: 1rem;
+  padding: 1em;
   color: #6a737d;
   border: 1px solid #e3e3e3;
   border-left: 0.25em solid #dfe2e5;
@@ -784,15 +788,14 @@ code {
   }
 }
 
-
 .menu-button {
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   background: transparent;
   color: var(--menu-fore-color);
   display: none;
   text-align: center;
-  margin: .5rem 0 0;
+  margin: 0.5rem 0 0;
   border: none;
   outline: none;
 }
