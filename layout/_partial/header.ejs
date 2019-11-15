@@ -13,6 +13,11 @@
         <a class="nav-list-link" href="<%= url_for(config.project_dir) %>"><%- __('nav.projects') %></a>
       </li>
       <% } %>
+      <% if(config.category_dir) { %>
+      <li class="nav-list-item" data-link="<%= url_for(config.category_dir) %>/">
+        <a class="nav-list-link" href="<%= url_for(config.category_dir) %>"><%- __('nav.categories') %></a>
+      </li>
+      <% } %>
       <% if(config.friends_dir) { %>
       <li class="nav-list-item" data-link="<%= url_for(config.friends_dir) %>/">
         <a class="nav-list-link" href="<%= url_for(config.friends_dir) %>"><%- __('nav.friends') %></a>

@@ -348,14 +348,14 @@ img::selection {
 .category-tag-list-link {
   flex: 1;
   padding-right: 12px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .archive-tag-list-count,
 .category-tag-list-count {
   position: relative;
-  width: 32px;
-  font-size: 0.9rem;
+  width: 26px;
+  font-size: 0.8rem;
 }
 
 .archive-tag-list-count::after,
