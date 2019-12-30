@@ -4,14 +4,15 @@ layout: layout
 
 <section class="index-content">
     <div class="index-post-list">
-        <ul class="index-list list-unstyled animate-list">
+        <ul class="index-list list-unstyled animate-list"
+            uk-scrollspy="target: > li; cls: uk-animation-slide-top-small;">
             <% page.posts.each(function(post) { %>
-            <li class="animate-list__item card slide-in-right">
+            <li class="animate-list__item card card-hover">
                 <h2 class="animate-list__title">
-                    <a class="" href="<%- config.root %><%- post.path %>">
-                        <%-_ (post.title || "Untitled").replace(/[<>&"]/g,function(c){
-                                return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-                            }) _%>
+                    <a class="index-post-link" href="<%- config.root %><%- post.path %>">
+                        <%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
+                            return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+                        }) %>
                     </a>
                 </h2>
                 <p><%- post.excerpt %></p>
@@ -64,10 +65,8 @@ layout: layout
     </div>
 
     <aside class="index-aside">
-        <%- partial('_partial/search', null, {cache: true}) %>
-
         <div class="card aside-tags">
-            <ul class="tags list-unstyled">
+            <ul class="tags list-unstyled" uk-sortable="handle: .tag-item">
                 <% site.tags.map(function(tag){  %>
                 <li class="tag-item"><a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
                         rel="<%= tag.length %>">#<%= tag.name %></a></li>

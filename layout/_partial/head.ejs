@@ -12,13 +12,17 @@
     <meta name="description" content="<%= config.description %>">
     <title><%_ if (page.title) { %><%= page.title + ' - ' + config.seo_title %><% } else {%><%= config.seo_title %><% } _%></title>
     <base href="/">
-    <link rel="preconnect" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="//cdn.bootcss.com">
     <link rel="manifest" href="<%= config.root %>manifest.json">
     <link rel="shortcut icon" href="<%= config.root %>icons/icon-72x72.png">
     <link rel="apple-touch-icon" href="<%= config.root %>icons/icon-192x192.png">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-light.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/atom-one-dark.min.css" media="screen and (prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.css" />
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.10/styles/atom-one-light.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.10/styles/atom-one-dark.min.css" rel="stylesheet" media="screen and (prefers-color-scheme: dark)">
+    <!-- UIkit CSS -->
+    <link href="https://cdn.bootcss.com/uikit/3.2.0/css/uikit.min.css" rel="stylesheet">
+    <!-- UIkit JS -->
+    <script src="https://cdn.bootcss.com/uikit/3.2.0/js/uikit.min.js" async></script>
+    <script src="https://cdn.bootcss.com/uikit/3.2.0/js/uikit-icons.min.js" async></script>
     <%- css(['styles/cold-stone.css']) %>
     <noscript>
       <p class="text-center">你的浏览器还没开启 Javascript 功能！</p>
