@@ -4,7 +4,7 @@
 
 ## プレビュー
 
-![demo](images/demo.gif)
+![demo](images/index.png)
 
 [サンプルサイト](https://coldstone.fun)
 

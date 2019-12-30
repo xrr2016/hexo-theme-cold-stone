@@ -4,7 +4,7 @@
 
 ## 预览
 
-![demo](images/demo.gif)
+![demo](images/index.png)
 
 [预览地址](https://coldstone.fun)
 
