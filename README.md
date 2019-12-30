@@ -8,7 +8,11 @@ A simple, refreshing, text-based [Hexo](https://hexo.io/zh-cn) blog theme.
 
 ## Preview
 
-![demo](images/index.png)
+light
+![demo](images/home.jpg)
+
+dark
+![demo](images/home_night.jpg)
 
 [Preview Link](https://coldstone.fun)
 

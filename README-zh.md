@@ -4,7 +4,11 @@
 
 ## 预览
 
-![demo](images/index.png)
+light
+![demo](images/home.jpg)
+
+dark
+![demo](images/home_night.jpg)
 
 [预览地址](https://coldstone.fun)
 

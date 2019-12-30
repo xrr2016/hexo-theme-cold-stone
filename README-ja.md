@@ -4,7 +4,11 @@
 
 ## プレビュー
 
-![demo](images/index.png)
+light
+![demo](images/home.jpg)
+
+dark
+![demo](images/home_night.jpg)
 
 [サンプルサイト](https://coldstone.fun)
 
